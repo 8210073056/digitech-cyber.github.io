@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>DigiTech Cyber – All Online Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  <h1>🔹 DigiTech Cyber 🔹</h1>
+  <p>Loan Services | Aadhaar | PAN | Voter ID | GST | Passport | E-commerce</p>
+</header>
+
+<section class="hero">
+  <h2>आपके सभी ऑनलाइन काम — एक ही जगह</h2>
+  <a href="https://wa.me/918210073056" class="btn">📲 WhatsApp Booking</a>
+</section>
+
+<section>
+  <h3>📌 Contact Details</h3>
+  <p><strong>Mobile:</strong> 8210073056</p>
+  <p><strong>Address:</strong> Bachharpur, Manikchauk, Sitamarhi, Bihar</p>
+  <p><strong>Facebook:</strong> <a target="_blank" href="https://www.facebook.com/share/1AXazBvgf6/">DigiTech Cyber FB Page</a></p>
+  <p><strong>YouTube:</strong> <a target="_blank" href="https://www.youtube.com/@mukundjha222">@mukundjha222</a></p>
+</section>
+
+<section>
+  <h3>🧾 Government & Online Services</h3>
+  <ul>
+    <li>✔ Aadhaar Update / Correction</li>
+    <li>✔ PAN New / Correction / e-PAN</li>
+    <li>✔ Voter ID Apply / Correction / Address Change</li>
+    <li>✔ Ration Card Service</li>
+    <li>✔ GST Registration / Filing / Consultancy</li>
+    <li>✔ Driving Licence — New / Renewal / LL</li>
+    <li>✔ Passport / Visa Assistance</li>
+  </ul>
+  <a href="https://wa.me/918210073056" class="btn">📩 Service Book Kare</a>
+</section>
+
+<section>
+  <h3>💼 Loan Services</h3>
+  <p>हम Personal, Business, MSME और Home Loan Documentation services provide करते हैं।</p>
+  <ul>
+    <li>🔹 Document Preparation</li>
+    <li>🔹 Online Apply Assistance</li>
+    <li>🔹 Bank Ready File</li>
+  </ul>
+  <a href="https://wa.me/918210073056" class="btn">💰 Loan Help</a>
+</section>
+
+<section>
+  <h3>🛍️ Online Products</h3>
+  <p>Ready-made cloth, electronics & business utilities available 🚚</p>
+  <a href="https://wa.me/918210073056" class="btn">🛒 Order on WhatsApp</a>
+</section>
+
+<section>
+  <h3>📢 Advertisement Services</h3>
+  <ul>
+    <li>Poster / Banner Design</li>
+    <li>Social Media Promotion</li>
+    <li>Video Ads</li>
+    <li>Logo & Branding</li>
+  </ul>
+  <a href="https://wa.me/918210073056" class="btn">🎯 Promote Your Business</a>
+</section>
+
+<footer>
+  <p>© DigiTech Cyber — Sitamarhi, Bihar</p>
+</footer>
+
+</body>
+</html>
