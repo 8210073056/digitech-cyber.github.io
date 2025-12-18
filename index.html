@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +8,10 @@
 <style>
 body{margin:0;font-family:Arial;background:#f4f6f8}
 header{background:#0d47a1;color:#fff;padding:20px;text-align:center}
+header h1{color:#fff;margin:0}   /* ✅ FIXED */
 section{max-width:1100px;margin:auto;padding:20px}
 .card{background:#fff;padding:20px;margin-bottom:20px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.1)}
-h1,h2,h3{color:#0d47a1}
+h2,h3{color:#0d47a1}
 
 .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
 .product{border:1px solid #ddd;border-radius:10px;padding:15px;text-align:center}
@@ -36,18 +36,17 @@ footer{background:#222;color:#aaa;text-align:center;padding:10px}
 
 <section>
 
-<!-- ✅ ABOUT US -->
+<!-- ABOUT -->
 <div class="card">
 <h2>About Us</h2>
 <p>
 DigiTech Cyber is a trusted Common Service Center (CSC) in Sitamarhi.
 We provide Aadhaar, PAN, online forms, bill payments and digital services.
-Along with this, we promote genuine home appliance products through
-affiliate marketing for customer convenience.
+We also promote genuine home appliance products through affiliate marketing.
 </p>
 </div>
 
-<!-- ✅ SERVICES -->
+<!-- SERVICES -->
 <div class="card">
 <h2>Our Services</h2>
 <ul>
@@ -59,41 +58,29 @@ affiliate marketing for customer convenience.
 </ul>
 </div>
 
-<!-- ✅ PRODUCTS -->
+<!-- PRODUCTS -->
 <div class="card">
 <h2>Home Appliances – Best Deals</h2>
 
 <div class="products">
 
+<!-- MIXER -->
 <div class="product">
-<img src="data:image/svg+xml;utf8,
-<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200'>
-<rect width='100%' height='100%' fill='%23eeeeee'/>
-<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
-font-size='18' fill='%23333'>Mixer Grinder</text>
-</svg>">
+<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiMzMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPk1peGVyIEdyaW5kZXI8L3RleHQ+PC9zdmc+">
 <h3>Mixer Grinder</h3>
 <a class="btn buy" href="https://amzn.to/4j0XC9g" target="_blank">Buy on Amazon</a>
 </div>
 
+<!-- WATER PURIFIER -->
 <div class="product">
-<img src="data:image/svg+xml;utf8,
-<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200'>
-<rect width='100%' height='100%' fill='%23eeeeee'/>
-<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
-font-size='18' fill='%23333'>Water Purifier</text>
-</svg>">
+<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiMzMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPldhdGVyIFB1cmlmaWVyPC90ZXh0Pjwvc3ZnPg==">
 <h3>Water Purifier</h3>
 <a class="btn buy" href="https://amzn.to/3KCL6Aj" target="_blank">Buy on Amazon</a>
 </div>
 
+<!-- INDUCTION -->
 <div class="product">
-<img src="data:image/svg+xml;utf8,
-<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200'>
-<rect width='100%' height='100%' fill='%23eeeeee'/>
-<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
-font-size='18' fill='%23333'>Induction Cooktop</text>
-</svg>">
+<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiMzMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkluZHVjdGlvbiBDb29rdG9wPC90ZXh0Pjwvc3ZnPg==">
 <h3>Induction Cooktop</h3>
 <a class="btn buy" href="https://amzn.to/48PNJ9G" target="_blank">Buy on Amazon</a>
 </div>
@@ -101,13 +88,7 @@ font-size='18' fill='%23333'>Induction Cooktop</text>
 </div>
 </div>
 
-<!-- ✅ LOCATION -->
-<div class="card">
-<h2>Our Location</h2>
-<iframe src="https://www.google.com/maps?q=Sitamarhi,Bihar&output=embed"></iframe>
-</div>
-
-<!-- ✅ CONTACT -->
+<!-- CONTACT -->
 <div class="card">
 <h2>Contact Us</h2>
 <p>📍 Sitamarhi<br>📞 8210073056</p>
