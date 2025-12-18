@@ -1,60 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>DigiTech Cyber</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{margin:0;font-family:Arial;background:#f4f4f4}
-header{background:#0d47a1;color:white;padding:20px;text-align:center}
-.box{background:white;margin:20px;padding:20px;border-radius:8px}
-footer{background:#222;color:#fff;text-align:center;padding:10px}
-img{width:100%;max-width:250px;display:block;margin:auto}
-a{display:inline-block;margin-top:10px;padding:10px 15px;background:green;color:white;text-decoration:none;border-radius:5px}
-</style>
+  <meta charset="UTF-8">
+  <title>DigiTech Cyber</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4;}
+    .topbar {background:#0d47a1; color:#fff; padding:12px 16px; text-align:center; font-size:20px; font-weight:bold;}
+    .container {max-width:900px; margin:0 auto; padding:16px;}
+    .card {background:#fff; padding:16px; margin-bottom:12px; border-radius:4px; box-shadow:0 0 3px rgba(0,0,0,0.1);}
+    h2 {margin-top:0;}
+    .products {display:flex; flex-direction:column; gap:16px;}
+    .product {display:flex; align-items:flex-start; gap:16px; border-bottom:1px solid #eee; padding-bottom:16px;}
+    .product:last-child {border-bottom:none;}
+    .product img {border-radius:4px;}
+    .buttons {margin-top:8px;}
+    .btn {display:inline-block; padding:8px 14px; margin-right:6px; margin-top:4px;
+          border-radius:4px; color:#fff; text-decoration:none; font-size:14px;}
+    .btn-buy {background:#28a745;}
+    .btn-wa {background:#25D366;}
+    .btn-call {background:#2196F3;}
+    .footer {text-align:center; padding:10px; background:#000; color:#fff; font-size:12px; margin-top:20px;}
+  </style>
 </head>
-
 <body>
 
-<header>
-<h1>DigiTech Cyber</h1>
-<p>CSC & Affiliate Services</p>
-</header>
+  <div class="topbar">DigiTech Cyber</div>
 
-<div class="box">
-<h2>About Us</h2>
-<p>DigiTech Cyber is a trusted CSC center in Sitamarhi providing digital services and affiliate product deals.</p>
-</div>
+  <div class="container">
 
-<div class="box">
-<h2>Our Services</h2>
-<ul>
-<li>Aadhaar & PAN</li>
-<li>Online Forms</li>
-<li>Bill Payment</li>
-<li>Affiliate Marketing</li>
-</ul>
-</div>
+    <!-- About Us -->
+    <div class="card">
+      <h2>About Us</h2>
+      <p>DigiTech Cyber ek student CSC center in Sitamarhi hai jo digital services aur affiliate products provide karta hai.</p>
+    </div>
 
-<div class="box">
-<h2>Products</h2>
+    <!-- Our Services -->
+    <div class="card">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Aadhar & PAN services</li>
+        <li>Online form filling</li>
+        <li>Online shopping support</li>
+        <li>Affiliate marketing help</li>
+      </ul>
+    </div>
 
-<h3>Mixer Grinder</h3>
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Mixer_grinder.jpg">
-<a href="https://amzn.to/4j0XC9g" target="_blank">Buy on Amazon</a>
+    <!-- Products -->
+    <div class="card">
+      <h2>Products</h2>
 
-<h3>Water Purifier</h3>
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Water_purifier.jpg">
-<a href="https://amzn.to/3KCL6Aj" target="_blank">Buy on Amazon</a>
+      <div class="products">
 
-<h3>Induction Cooktop</h3>
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Induction_cooker.jpg">
-<a href="https://amzn.to/48PNJ9G" target="_blank">Buy on Amazon</a>
+        <!-- Product 1 -->
+        <div class="product">
+          <img src="images/mixer.jpg" alt="Mixer Grinder" width="120">
+          <div>
+            <h3>Mixer Grinder</h3>
+            <p>Ghar ke liye powerful mixer grinder.</p>
+            <div class="buttons">
+              <a class="btn btn-buy" href="https://www.amazon.in" target="_blank">Buy on Amazon</a>
+              <a class="btn btn-wa" href="https://wa.me/918210073056?text=Namaste%20mujhe%20Mixer%20Grinder%20ke%20details%20chahiye" target="_blank">WhatsApp Par Chat</a>
+              <a class="btn btn-call" href="tel:+918210073056">Call Now</a>
+            </div>
+          </div>
+        </div>
 
-</div>
+        <!-- Product 2 -->
+        <div class="product">
+          <img src="images/water-purifier.jpg" alt="Water Purifier" width="120">
+          <div>
+            <h3>Water Purifier</h3>
+            <p>Safe drinking water ke liye RO purifier.</p>
+            <div class="buttons">
+              <a class="btn btn-buy" href="https://www.amazon.in" target="_blank">Buy on Amazon</a>
+              <a class="btn btn-wa" href="https://wa.me/918210073056?text=Namaste%20mujhe%20Water%20Purifier%20ke%20details%20chahiye" target="_blank">WhatsApp Par Chat</a>
+              <a class="btn btn-call" href="tel:+918210073056">Call Now</a>
+            </div>
+          </div>
+        </div>
 
-<footer>
-© 2025 DigiTech Cyber | All Rights Reserved
-</footer>
+        <!-- Product 3 -->
+        <div class="product">
+          <img src="images/induction.jpg" alt="Induction Cooktop" width="120">
+          <div>
+            <h3>Induction Cooktop</h3>
+            <p>Energy efficient induction cooktop.</p>
+            <div class="buttons">
+              <a class="btn btn-buy" href="https://www.amazon.in" target="_blank">Buy on Amazon</a>
+              <a class="btn btn-wa" href="https://wa.me/918210073056?text=Namaste%20mujhe%20Induction%20Cooktop%20ke%20details%20chahiye" target="_blank">WhatsApp Par Chat</a>
+              <a class="btn btn-call" href="tel:+918210073056">Call Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © 2025 DigiTech Cyber | All Rights Reserved
+  </div>
 
 </body>
-</html>
+              </html>
