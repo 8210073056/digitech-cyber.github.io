@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +8,14 @@
 
 <style>
 body{margin:0;font-family:Arial;background:#f4f6f8}
-header{background:#0d47a1;color:#fff;padding:20px;text-align:center}
-header h1{color:#fff;margin:0}   /* ✅ FIXED */
+header{background:#0d47a1;color:#fff;padding:22px;text-align:center}
 section{max-width:1100px;margin:auto;padding:20px}
 .card{background:#fff;padding:20px;margin-bottom:20px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.1)}
-h2,h3{color:#0d47a1}
+h1,h2,h3{color:#0d47a1}
 
 .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
 .product{border:1px solid #ddd;border-radius:10px;padding:15px;text-align:center}
-.product img{width:100%;height:160px;object-fit:contain}
+.product img{width:100%;height:160px;object-fit:contain;border-radius:6px;background:#fafafa}
 
 .btn{display:inline-block;padding:10px 15px;margin-top:10px;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold}
 .buy{background:#2e7d32}
@@ -36,7 +36,6 @@ footer{background:#222;color:#aaa;text-align:center;padding:10px}
 
 <section>
 
-<!-- ABOUT -->
 <div class="card">
 <h2>About Us</h2>
 <p>
@@ -46,11 +45,10 @@ We also promote genuine home appliance products through affiliate marketing.
 </p>
 </div>
 
-<!-- SERVICES -->
 <div class="card">
 <h2>Our Services</h2>
 <ul>
-<li>Aadhaar & PAN Card Services</li>
+<li>Aadhaar & PAN Services</li>
 <li>Online Government Forms</li>
 <li>Electricity & Utility Bill Payment</li>
 <li>CSC Digital Services</li>
@@ -58,7 +56,6 @@ We also promote genuine home appliance products through affiliate marketing.
 </ul>
 </div>
 
-<!-- PRODUCTS -->
 <div class="card">
 <h2>Home Appliances – Best Deals</h2>
 
@@ -66,21 +63,21 @@ We also promote genuine home appliance products through affiliate marketing.
 
 <!-- MIXER -->
 <div class="product">
-<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiMzMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPk1peGVyIEdyaW5kZXI8L3RleHQ+PC9zdmc+">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAACACAYAAACtWK6eAAAACXBIWXMAAAsSAAALEgHS3X78AAAAkUlEQVR4nO3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4G4ABAAEJ7l8AAAAASUVORK5CYII=">
 <h3>Mixer Grinder</h3>
 <a class="btn buy" href="https://amzn.to/4j0XC9g" target="_blank">Buy on Amazon</a>
 </div>
 
 <!-- WATER PURIFIER -->
 <div class="product">
-<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiMzMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPldhdGVyIFB1cmlmaWVyPC90ZXh0Pjwvc3ZnPg==">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAACACAYAAACtWK6eAAAACXBIWXMAAAsSAAALEgHS3X78AAAAkUlEQVR4nO3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4G4ABAAEJ7l8AAAAASUVORK5CYII=">
 <h3>Water Purifier</h3>
 <a class="btn buy" href="https://amzn.to/3KCL6Aj" target="_blank">Buy on Amazon</a>
 </div>
 
 <!-- INDUCTION -->
 <div class="product">
-<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiMzMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkluZHVjdGlvbiBDb29rdG9wPC90ZXh0Pjwvc3ZnPg==">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAACACAYAAACtWK6eAAAACXBIWXMAAAsSAAALEgHS3X78AAAAkUlEQVR4nO3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4G4ABAAEJ7l8AAAAASUVORK5CYII=">
 <h3>Induction Cooktop</h3>
 <a class="btn buy" href="https://amzn.to/48PNJ9G" target="_blank">Buy on Amazon</a>
 </div>
@@ -88,7 +85,11 @@ We also promote genuine home appliance products through affiliate marketing.
 </div>
 </div>
 
-<!-- CONTACT -->
+<div class="card">
+<h2>Our Location</h2>
+<iframe src="https://www.google.com/maps?q=Sitamarhi,Bihar&output=embed"></iframe>
+</div>
+
 <div class="card">
 <h2>Contact Us</h2>
 <p>📍 Sitamarhi<br>📞 8210073056</p>
