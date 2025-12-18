@@ -1,47 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigiTech Cyber | Digital Services & Amazon Deals Bihar</title>
+    <title>DigiTech Cyber | Manikchowk, Bihar - Digital Services</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        :root { --blue: #004a99; --green: #25d366; --orange: #ff9900; --dark: #121212; }
+        :root { --blue: #003366; --green: #25d366; --orange: #ff9900; --dark: #1a1a1a; --bg: #f4f7fa; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: #f1f4f8; color: #333; }
+        body { background-color: var(--bg); color: #333; }
         
         header {
-            background: linear-gradient(135deg, #001f3f, #004a99);
+            background: linear-gradient(135deg, #001f3f, #003366);
             color: white; padding: 60px 20px; text-align: center;
             border-bottom: 5px solid var(--orange);
         }
-        header h1 { font-size: 3rem; text-transform: uppercase; margin-bottom: 10px; }
-        
-        .container { max-width: 1100px; margin: auto; padding: 20px; }
+        header h1 { font-size: 2.8rem; text-transform: uppercase; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
 
-        /* About Us Section */
-        .about-card {
-            background: white; padding: 30px; border-radius: 15px; margin-top: -40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-left: 6px solid var(--blue);
+        .container { max-width: 1050px; margin: auto; padding: 20px; }
+
+        /* About Us with Location */
+        .about-section {
+            background: white; padding: 35px; border-radius: 15px; margin-top: -40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-left: 8px solid var(--blue);
         }
-        .about-card h2 { color: var(--blue); margin-bottom: 15px; }
+        .about-section h2 { color: var(--blue); margin-bottom: 10px; }
 
         .section-title {
-            font-size: 1.8rem; color: var(--blue); margin: 40px 0 20px;
-            display: flex; align-items: center; gap: 15px; border-bottom: 2px solid #ccc; padding-bottom: 10px;
+            font-size: 1.7rem; color: var(--blue); margin: 40px 0 20px;
+            display: flex; align-items: center; gap: 12px; border-bottom: 2px solid #ddd; padding-bottom: 10px;
         }
 
-        /* Tools Grid */
+        /* Digital Tools Grid */
         .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; }
         .tool-card {
             background: white; padding: 20px; text-align: center; border-radius: 12px;
-            text-decoration: none; color: #333; font-weight: 600; border: 1px solid #ddd; transition: 0.3s;
+            text-decoration: none; color: #333; font-weight: 600; border: 1px solid #eee; transition: 0.3s;
         }
-        .tool-card i { display: block; font-size: 2rem; color: var(--blue); margin-bottom: 10px; }
-        .tool-card:hover { transform: translateY(-5px); background: var(--blue); color: white; }
+        .tool-card i { display: block; font-size: 2.2rem; color: var(--blue); margin-bottom: 10px; }
+        .tool-card:hover { transform: translateY(-5px); background: var(--blue); color: white; border-color: var(--blue); }
         .tool-card:hover i { color: white; }
 
         /* Product Cards */
@@ -49,21 +50,21 @@
             background: white; border-radius: 15px; display: flex; flex-wrap: wrap;
             margin-bottom: 30px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee;
         }
-        .product-img { width: 300px; height: 300px; object-fit: contain; padding: 20px; }
+        .product-img { width: 300px; height: 300px; object-fit: contain; padding: 20px; background: #fff; }
         .product-info { padding: 30px; flex: 1; min-width: 300px; }
-        .product-info h3 { font-size: 1.5rem; margin-bottom: 15px; }
+        .product-info h3 { font-size: 1.4rem; color: #222; margin-bottom: 15px; }
 
-        .btn-group { display: flex; gap: 15px; flex-wrap: wrap; }
+        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
         .btn {
-            padding: 12px 25px; border-radius: 8px; text-decoration: none;
-            font-weight: 700; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s;
+            padding: 12px 22px; border-radius: 8px; text-decoration: none;
+            font-weight: 700; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s;
         }
         .btn-amazon { background: var(--orange); color: #000; }
         .btn-whatsapp { background: var(--green); color: #fff; }
-        .btn:hover { opacity: 0.8; transform: scale(1.05); }
+        .btn:hover { opacity: 0.85; transform: scale(1.02); }
 
         footer { background: var(--dark); color: white; padding: 50px 20px; text-align: center; margin-top: 60px; }
-        .disclosure { font-size: 0.75rem; color: #777; margin-top: 20px; border-top: 1px solid #333; padding-top: 20px; }
+        .disclosure { font-size: 0.75rem; color: #888; margin-top: 25px; padding-top: 20px; border-top: 1px solid #333; }
 
         @media (max-width: 768px) { .product-img { width: 100%; height: auto; } }
     </style>
@@ -72,71 +73,72 @@
 
 <header>
     <h1>DigiTech Cyber</h1>
-    <p><i class="fas fa-map-marker-alt"></i> Digital Service Center | Bihar, India</p>
+    <p><i class="fas fa-map-marker-alt"></i> Manikchowk, Azamgarh, Bachharpur, Bihar 843323</p>
 </header>
 
 <div class="container">
 
-    <div class="about-card">
+    <div class="about-section">
         <h2>About DigiTech Cyber</h2>
-        <p>DigiTech Cyber is a premier Digital Service Center based in <b>Bihar</b>. We specialize in providing expert assistance for <b>Aadhaar, PAN Card, Ration Card</b>, and all types of <b>Government Online Forms</b>. Our goal is to make digital services accessible to everyone while recommending the best-quality products for your home from Amazon.</p>
+        <p><b>DigiTech Cyber</b> Bihar mein ek vishwasniya Digital Service Center hai. Hum <b>Aadhaar, PAN Card, Ration Card</b>, aur sabhi <b>Sarkari Form</b> bharne mein expert madad dete hain. Hum aapko Amazon ke behtareen products bhi suggest karte hain.</p>
+        <p style="margin-top:10px; font-size: 0.9rem; color: #555;"><i class="fas fa-store"></i> <b>Location:</b> Manikchowk, Azamgarh, Bihar - 843323</p>
     </div>
 
-    <h2 class="section-title"><i class="fas fa-id-badge"></i> Gov & Utility Services</h2>
+    <h2 class="section-title"><i class="fas fa-laptop-code"></i> Working Digital Links</h2>
     <div class="tools-grid">
         <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="tool-card"><i class="fas fa-id-card"></i> Aadhaar Portal</a>
-        <a href="https://onlineservices.tin.egov-nsdl.com/etaxwb/VerifyPAN.html" target="_blank" class="tool-card"><i class="fas fa-search"></i> Verify PAN</a>
+        <a href="https://onlineservices.tin.egov-nsdl.com/etaxwb/VerifyPAN.html" target="_blank" class="tool-card"><i class="fas fa-search-location"></i> Track PAN</a>
         <a href="https://rconline.bihar.gov.in/" target="_blank" class="tool-card"><i class="fas fa-utensils"></i> Bihar Ration Card</a>
-        <a href="https://www.sarkariresult.com/" target="_blank" class="tool-card"><i class="fas fa-briefcase"></i> Govt Vacancy</a>
-        <a href="https://www.cibil.com/freecibilscore" target="_blank" class="tool-card"><i class="fas fa-chart-line"></i> Free CIBIL Score</a>
-        <a href="https://scholarships.gov.in/" target="_blank" class="tool-card"><i class="fas fa-graduation-cap"></i> Scholarship</a>
+        <a href="https://employmentnews.gov.in/" target="_blank" class="tool-card"><i class="fas fa-newspaper"></i> Govt Jobs</a>
+        <a href="https://www.cibil.com/freecibilscore" target="_blank" class="tool-card"><i class="fas fa-chart-line"></i> Free CIBIL</a>
+        <a href="https://voters.eci.gov.in/" target="_blank" class="tool-card"><i class="fas fa-user-check"></i> Voter ID</a>
     </div>
 
-    <h2 class="section-title"><i class="fab fa-amazon"></i> Handpicked Home Deals</h2>
+    <h2 class="section-title"><i class="fab fa-amazon"></i> Best Amazon Recommendations</h2>
     
     <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71u9yH0-O8L._AC_SL1500_.jpg" class="product-img">
+        <img src="https://m.media-amazon.com/images/I/71u9yH0-O8L._SX679_.jpg" alt="Mixer Grinder" class="product-img">
         <div class="product-info">
-            <h3>Premium 750W Mixer Grinder</h3>
-            <p>Best-selling heavy duty mixer with 3 stainless steel jars. High performance motor for tough Indian grinding. Perfect for your kitchen.</p>
+            <h3>High-Power Mixer Grinder</h3>
+            <p>750W motor with 3 stainless steel jars. Ideal for tough Indian grinding. Durable and high-rated quality.</p>
             <div class="btn-group">
-                <a href="https://amzn.to/4j3g8Ol" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Buy on Amazon</a>
+                <a href="https://amzn.to/4j3g8Ol" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Shop Now</a>
                 <a href="https://wa.me/918210073056" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Inquire</a>
             </div>
         </div>
     </div>
 
     <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/61mNn9-2v6L._AC_SL1500_.jpg" class="product-img">
+        <img src="https://m.media-amazon.com/images/I/61mNn9-2v6L._SX679_.jpg" alt="Water Purifier" class="product-img">
         <div class="product-info">
             <h3>Advanced RO+UV Water Purifier</h3>
-            <p>Ensure 100% safe drinking water. Multi-stage purification with essential minerals. Compact and elegant design.</p>
+            <p>100% safe drinking water with multi-stage purification. Compact and elegant design for your kitchen.</p>
             <div class="btn-group">
-                <a href="https://amzn.to/4ja3LQO" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Buy on Amazon</a>
+                <a href="https://amzn.to/4ja3LQO" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Shop Now</a>
                 <a href="https://wa.me/918210073056" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Inquire</a>
             </div>
         </div>
     </div>
 
     <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/61A8-7Yh58L._AC_SL1500_.jpg" class="product-img">
+        <img src="https://m.media-amazon.com/images/I/61A8-7Yh58L._SX679_.jpg" alt="Induction Cooktop" class="product-img">
         <div class="product-info">
             <h3>Smart Induction Cooktop</h3>
-            <p>Energy efficient and fast cooking. Comes with preset menus for Indian cooking. Easy to clean and safe to use.</p>
+            <p>Energy-efficient cooking with multiple preset Indian menus. Fast heating and very easy to clean.</p>
             <div class="btn-group">
-                <a href="https://amzn.to/4pVy7Zy" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Buy on Amazon</a>
+                <a href="https://amzn.to/4pVy7Zy" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Shop Now</a>
                 <a href="https://wa.me/918210073056" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Inquire</a>
             </div>
         </div>
     </div>
 
     <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71X0m4XjKqL._AC_SL1500_.jpg" class="product-img">
+        <img src="https://m.media-amazon.com/images/I/71X0m4XjKqL._SX679_.jpg" alt="Washing Machine" class="product-img">
         <div class="product-info">
-            <h3>Fully Automatic Washing Machine</h3>
-            <p>High-quality cleaning with gentle care for your clothes. Low water and power consumption. Top rated for reliability.</p>
+            <h3>Automatic Washing Machine</h3>
+            <p>Top-rated performance with gentle wash technology. Saves water and electricity for a fresh clean look.</p>
             <div class="btn-group">
-                <a href="https://amzn.to/48JFVYr" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Buy on Amazon</a>
+                <a href="https://amzn.to/48JFVYr" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Shop Now</a>
                 <a href="https://wa.me/918210073056" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Inquire</a>
             </div>
         </div>
@@ -145,11 +147,11 @@
 </div>
 
 <footer>
-    <p style="font-weight: 600; font-size: 1.2rem;">&copy; 2025 DigiTech Cyber | All Rights Reserved</p>
-    <p>Professional Digital Solutions & Handpicked Products</p>
-    <p><i class="fas fa-map-marker-alt"></i> Located in Bihar, India</p>
+    <p style="font-weight: 700; font-size: 1.3rem; margin-bottom: 5px;">DigiTech Cyber</p>
+    <p>&copy; 2025 DigiTech Cyber | All Rights Reserved</p>
+    <p><i class="fas fa-map-marker-alt"></i> Manikchowk, Bihar - 843323</p>
     <div class="disclosure">
-        Disclosure: As an Amazon Associate, I earn from qualifying purchases at no extra cost to you.
+        <b>Disclosure:</b> As an Amazon Associate, I earn from qualifying purchases at no extra cost to you.
     </div>
 </footer>
 
