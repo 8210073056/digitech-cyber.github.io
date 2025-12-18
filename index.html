@@ -3,156 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigiTech Cyber | Bihar Digital Services & Best Deals</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>DigiTech Cyber | Manikchowk, Bihar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
-        :root { --main: #003366; --accent: #ff9900; --wa: #25d366; --bg: #f0f2f5; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background-color: var(--bg); color: #333; }
+        :root { --blue: #003366; --orange: #ff9900; --green: #25d366; --bg: #f8f9fa; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--bg); color: #333; line-height: 1.6; }
         
         header {
-            background: linear-gradient(135deg, #001f3f, #003366);
-            color: white; padding: 50px 20px; text-align: center;
-            border-bottom: 5px solid var(--accent);
+            background: linear-gradient(rgba(0,31,63,0.9), rgba(0,31,63,0.9)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80');
+            background-size: cover; color: white; padding: 60px 20px; text-align: center;
+            border-bottom: 5px solid var(--orange);
         }
-        header h1 { font-size: 2.5rem; margin-bottom: 5px; }
-        header p { opacity: 0.9; font-size: 1rem; }
 
         .container { max-width: 1000px; margin: auto; padding: 20px; }
 
-        /* About & Location */
-        .box {
-            background: white; padding: 30px; border-radius: 12px; 
-            margin-top: -30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .box h2 { color: var(--main); margin-bottom: 10px; }
-
-        .section-title {
-            margin: 40px 0 20px; color: var(--main); font-size: 1.5rem;
-            display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #ddd;
+        .location-card {
+            background: white; padding: 25px; border-radius: 15px; margin-top: -40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center;
         }
 
-        /* Services Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
-        .card {
-            background: white; padding: 20px; text-align: center; border-radius: 10px;
-            text-decoration: none; color: #333; font-weight: 600; border: 1px solid #eee; transition: 0.3s;
-        }
-        .card i { display: block; font-size: 2rem; color: var(--main); margin-bottom: 10px; }
-        .card:hover { transform: translateY(-5px); background: var(--main); color: white; }
-        .card:hover i { color: white; }
+        .section-title { margin: 40px 0 20px; color: var(--blue); border-left: 5px solid var(--orange); padding-left: 15px; }
 
-        /* Product Cards */
+        .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
+        .s-card {
+            background: white; padding: 20px; border-radius: 12px; text-align: center;
+            text-decoration: none; color: #333; border: 1px solid #ddd; transition: 0.3s;
+        }
+        .s-card i { font-size: 2rem; color: var(--blue); margin-bottom: 10px; display: block; }
+        .s-card:hover { background: var(--blue); color: white; transform: translateY(-5px); }
+        .s-card:hover i { color: white; }
+
+        /* Product Section */
         .p-card {
-            background: white; border-radius: 12px; display: flex; flex-wrap: wrap;
-            margin-bottom: 25px; overflow: hidden; border: 1px solid #ddd;
+            background: white; border-radius: 15px; display: flex; flex-wrap: wrap;
+            margin-bottom: 30px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        .p-img { width: 250px; height: 250px; object-fit: cover; background: #fff; padding: 10px; }
-        .p-info { padding: 25px; flex: 1; min-width: 280px; }
-        .p-info h3 { margin-bottom: 10px; }
+        .p-img-box { width: 300px; height: 300px; background: white; padding: 15px; }
+        .p-img { width: 100%; height: 100%; object-fit: contain; }
+        .p-content { padding: 30px; flex: 1; min-width: 300px; }
 
-        /* Buttons */
-        .btn-flex { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
         .btn {
-            padding: 10px 20px; border-radius: 6px; text-decoration: none;
-            font-weight: 700; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 700;
+            display: inline-flex; align-items: center; gap: 8px; margin-top: 15px; transition: 0.3s;
         }
-        .btn-amz { background: var(--accent); color: black; }
-        .btn-wa { background: var(--wa); color: white; }
-        .btn-call { background: var(--main); color: white; padding: 15px 30px; font-size: 1.1rem; }
+        .btn-map { background: var(--blue); color: white; }
+        .btn-amz { background: var(--orange); color: black; }
+        .btn-wa { background: var(--green); color: white; }
+        .btn-call { background: #d32f2f; color: white; font-size: 1.2rem; }
+        .btn:hover { transform: scale(1.05); opacity: 0.9; }
 
-        footer { background: #111; color: #ccc; padding: 40px 20px; text-align: center; margin-top: 50px; }
-        .loc-text { margin-bottom: 15px; color: white; font-weight: 600; }
+        footer { background: #1a1a1a; color: white; padding: 40px 20px; text-align: center; margin-top: 50px; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>DigiTech Cyber</h1>
-    <p><i class="fas fa-map-marker-alt"></i> Manikchowk, Azamgarh, Bachharpur, Bihar 843323</p>
+    <p>Manikchowk, Azamgarh, Bihar - 843323</p>
 </header>
 
 <div class="container">
-
-    <div class="box">
-        <h2>About DigiTech Cyber</h2>
-        <p>Bihar ka vishwasniya digital center. Hum <b>Caste, Income, Residence Certificates</b> aur <b>Aadhaar/Ration Card</b> ki sabhi online services fast pradan karte hain.</p>
+    <div class="location-card">
+        <h2>Aapka Vishwasniya Digital Center</h2>
+        <p style="margin: 10px 0;">Sarkari Form, Aadhaar, aur Ration Card ki sabhi suvidhaon ke liye milein.</p>
+        <a href="https://maps.app.goo.gl/ChIJWa7twj757DkRauwzsmS_K9I" target="_blank" class="btn btn-map">
+            <i class="fas fa-map-marker-alt"></i> View on Google Maps
+        </a>
     </div>
 
-    <h2 class="section-title"><i class="fas fa-star"></i> Important Online Services</h2>
-    <div class="grid">
-        <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="card"><i class="fas fa-id-card"></i> Aadhaar Card</a>
-        <a href="https://serviceonline.bihar.gov.in/" target="_blank" class="card"><i class="fas fa-file-alt"></i> RTPS Bihar</a>
-        <a href="https://rconline.bihar.gov.in/" target="_blank" class="card"><i class="fas fa-utensils"></i> Bihar Ration</a>
-        <a href="https://employmentnews.gov.in/" target="_blank" class="card"><i class="fas fa-briefcase"></i> Govt Vacancy</a>
-        <a href="https://www.cibil.com/freecibilscore" target="_blank" class="card"><i class="fas fa-chart-line"></i> Free CIBIL</a>
-        <a href="https://voters.eci.gov.in/" target="_blank" class="card"><i class="fas fa-user-check"></i> Voter ID</a>
+    <h2 class="section-title">Online Services</h2>
+    <div class="grid-services">
+        <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="s-card"><i class="fas fa-id-card"></i> Aadhaar</a>
+        <a href="https://serviceonline.bihar.gov.in/" target="_blank" class="s-card"><i class="fas fa-file-invoice"></i> RTPS Bihar</a>
+        <a href="https://rconline.bihar.gov.in/" target="_blank" class="s-card"><i class="fas fa-utensils"></i> Ration Card</a>
+        <a href="https://employmentnews.gov.in/" target="_blank" class="s-card"><i class="fas fa-newspaper"></i> Govt Jobs</a>
+        <a href="https://www.cibil.com/freecibilscore" target="_blank" class="s-card"><i class="fas fa-chart-line"></i> Free CIBIL</a>
     </div>
 
-    <h2 class="section-title"><i class="fab fa-amazon"></i> Best Product Recommendations</h2>
+    <h2 class="section-title">Best Home Products (Amazon Deals)</h2>
 
     <div class="p-card">
-        <img src="https://images.unsplash.com/photo-1585232004423-244e0e6904e3?auto=format&fit=crop&w=400&q=80" class="p-img">
-        <div class="p-info">
-            <h3>Powerful 750W Mixer Grinder</h3>
-            <p>Tough grinding ke liye best mixer. 3 stainless steel jars ke saath.</p>
-            <div class="btn-flex">
-                <a href="https://amzn.to/4j3g8Ol" target="_blank" class="btn btn-amz"><i class="fab fa-amazon"></i> Buy Now</a>
-                <a href="https://wa.me/918210073056" target="_blank" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Chat</a>
-            </div>
+        <div class="p-img-box">
+            <img src="https://m.media-amazon.com/images/I/71X0m4XjKqL._SX679_.jpg" alt="Washing Machine" class="p-img">
         </div>
-    </div>
-
-    <div class="p-card">
-        <img src="https://images.unsplash.com/photo-1626071465942-701332a6886e?auto=format&fit=crop&w=400&q=80" class="p-img">
-        <div class="p-info">
-            <h3>Advanced RO+UV Water Purifier</h3>
-            <p>Shuddh aur surakshit peene ka pani aapki family ke liye.</p>
-            <div class="btn-flex">
-                <a href="https://amzn.to/4ja3LQO" target="_blank" class="btn btn-amz"><i class="fab fa-amazon"></i> Buy Now</a>
-                <a href="https://wa.me/918210073056" target="_blank" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Chat</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="p-card">
-        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=400&q=80" class="p-img">
-        <div class="p-info">
-            <h3>Fast Heating Induction Cooktop</h3>
-            <p>Bijli ki bachat aur fast cooking ke liye best option.</p>
-            <div class="btn-flex">
-                <a href="https://amzn.to/4pVy7Zy" target="_blank" class="btn btn-amz"><i class="fab fa-amazon"></i> Buy Now</a>
-                <a href="https://wa.me/918210073056" target="_blank" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Chat</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="p-card">
-        <img src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&w=400&q=80" class="p-img">
-        <div class="p-info">
+        <div class="p-content">
             <h3>Fully Automatic Washing Machine</h3>
-            <p>Kapdo ki behtareen safai ab bilkul aasan.</p>
-            <div class="btn-flex">
-                <a href="https://amzn.to/48JFVYr" target="_blank" class="btn btn-amz"><i class="fab fa-amazon"></i> Buy Now</a>
+            <p>Samsung/LG Top Rated Quality. Best for easy clothes washing with 5-star rating.</p>
+            <div style="display: flex; gap: 10px;">
+                <a href="https://amzn.to/48JFVYr" target="_blank" class="btn btn-amz"><i class="fab fa-amazon"></i> Shop Now</a>
                 <a href="https://wa.me/918210073056" target="_blank" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Chat</a>
             </div>
         </div>
     </div>
 
-    <div style="text-align: center; margin-top: 40px;">
-        <h2 style="margin-bottom: 15px;">Need Expert Help?</h2>
-        <a href="tel:+918210073056" class="btn btn-call"><i class="fas fa-phone-alt"></i> CALL NOW</a>
+    <div class="p-card">
+        <div class="p-img-box">
+            <img src="https://m.media-amazon.com/images/I/71u9yH0-O8L._SX679_.jpg" alt="Mixer Grinder" class="p-img">
+        </div>
+        <div class="p-content">
+            <h3>Power Mixer Grinder (750W)</h3>
+            <p>Hard grinding ke liye best. 3 Jars ke saath heavy duty motor.</p>
+            <div style="display: flex; gap: 10px;">
+                <a href="https://amzn.to/4j3g8Ol" target="_blank" class="btn btn-amz"><i class="fab fa-amazon"></i> Shop Now</a>
+                <a href="https://wa.me/918210073056" target="_blank" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Chat</a>
+            </div>
+        </div>
     </div>
 
+    <div style="text-align: center; margin-top: 50px;">
+        <h2>Kissi bhi sahayata ke liye call karein</h2>
+        <a href="tel:+918210073056" class="btn btn-call">
+            <i class="fas fa-phone-alt"></i> CALL NOW: 82100 73056
+        </a>
+    </div>
 </div>
 
 <footer>
-    <p class="loc-text"><i class="fas fa-map-marker-alt"></i> Manikchowk, Azamgarh, Bihar - 843323</p>
-    <p>&copy; 2025 DigiTech Cyber | All Rights Reserved</p>
-    <p style="font-size: 0.7rem; color: #666; margin-top: 15px;">Disclosure: As an Amazon Associate, I earn from qualifying purchases.</p>
+    <p><b>DigiTech Cyber, Manikchowk, Bihar</b></p>
+    <p>&copy; 2025 All Rights Reserved</p>
+    <p style="font-size: 0.7rem; margin-top: 10px; color: #888;">Disclosure: As an Amazon Associate, I earn from qualifying purchases.</p>
 </footer>
 
 </body>
