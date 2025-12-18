@@ -3,76 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigiTech Cyber | Professional Digital Services Bihar</title>
+    <title>DigiTech Cyber | Digital Services & Amazon Deals Bihar</title>
     
-    <meta name="description" content="DigiTech Cyber Bihar - Trusted CSC partner for PAN, Aadhaar, Bihar Ration Card, Scholarship forms, and Best Amazon Deals.">
-    <meta name="keywords" content="CSC Center Bihar, PAN Card, Aadhaar, Ration Card Bihar, Employment News, Amazon Deals, DigiTech Cyber">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        :root { --primary: #004a99; --secondary: #25d366; --amazon: #ff9900; --dark: #1a1a1a; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background-color: #f4f7f9; color: #333; line-height: 1.6; }
+        :root { --blue: #004a99; --green: #25d366; --orange: #ff9900; --dark: #121212; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #f1f4f8; color: #333; }
         
         header {
-            background: linear-gradient(135deg, #002d5b 0%, #0056b3 100%);
-            color: white; padding: 50px 20px; text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-bottom: 4px solid var(--amazon);
+            background: linear-gradient(135deg, #001f3f, #004a99);
+            color: white; padding: 60px 20px; text-align: center;
+            border-bottom: 5px solid var(--orange);
         }
-        header h1 { font-size: 2.5rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
-        header p { font-weight: 300; opacity: 0.9; font-size: 1.1rem; }
+        header h1 { font-size: 3rem; text-transform: uppercase; margin-bottom: 10px; }
+        
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
 
-        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        /* About Us Section */
+        .about-card {
+            background: white; padding: 30px; border-radius: 15px; margin-top: -40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-left: 6px solid var(--blue);
+        }
+        .about-card h2 { color: var(--blue); margin-bottom: 15px; }
 
         .section-title {
-            font-size: 1.6rem; color: var(--primary); margin: 40px 0 20px;
-            display: flex; align-items: center; gap: 12px;
-            border-bottom: 2px solid #ddd; padding-bottom: 10px;
+            font-size: 1.8rem; color: var(--blue); margin: 40px 0 20px;
+            display: flex; align-items: center; gap: 15px; border-bottom: 2px solid #ccc; padding-bottom: 10px;
         }
 
         /* Tools Grid */
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; }
         .tool-card {
             background: white; padding: 20px; text-align: center; border-radius: 12px;
-            text-decoration: none; color: #333; font-weight: 600; font-size: 0.85rem;
-            transition: 0.3s; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-decoration: none; color: #333; font-weight: 600; border: 1px solid #ddd; transition: 0.3s;
         }
-        .tool-card i { display: block; font-size: 1.8rem; color: var(--primary); margin-bottom: 10px; }
-        .tool-card:hover { transform: translateY(-5px); background: var(--primary); color: white; }
+        .tool-card i { display: block; font-size: 2rem; color: var(--blue); margin-bottom: 10px; }
+        .tool-card:hover { transform: translateY(-5px); background: var(--blue); color: white; }
         .tool-card:hover i { color: white; }
 
-        /* Product List */
-        .product-list { display: flex; flex-direction: column; gap: 25px; }
+        /* Product Cards */
         .product-card {
             background: white; border-radius: 15px; display: flex; flex-wrap: wrap;
-            overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.05); border: 1px solid #eee;
+            margin-bottom: 30px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee;
         }
-        .product-img { width: 280px; height: 280px; object-fit: contain; padding: 25px; background: #fff; display: block; }
+        .product-img { width: 300px; height: 300px; object-fit: contain; padding: 20px; }
         .product-info { padding: 30px; flex: 1; min-width: 300px; }
-        .product-info h3 { margin-bottom: 12px; font-size: 1.4rem; color: #222; }
-        .product-info p { font-size: 0.95rem; color: #666; margin-bottom: 25px; }
+        .product-info h3 { font-size: 1.5rem; margin-bottom: 15px; }
 
-        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn-group { display: flex; gap: 15px; flex-wrap: wrap; }
         .btn {
-            padding: 12px 20px; border-radius: 8px; text-decoration: none;
-            font-weight: 700; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s;
+            padding: 12px 25px; border-radius: 8px; text-decoration: none;
+            font-weight: 700; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s;
         }
-        .btn-amazon { background: var(--amazon); color: #000; }
-        .btn-whatsapp { background: var(--secondary); color: #fff; }
-        .btn:hover { opacity: 0.9; transform: scale(1.03); }
+        .btn-amazon { background: var(--orange); color: #000; }
+        .btn-whatsapp { background: var(--green); color: #fff; }
+        .btn:hover { opacity: 0.8; transform: scale(1.05); }
 
-        .contact-box {
-            text-align: center; background: #fff; padding: 40px; border-radius: 15px;
-            border: 2px dashed var(--primary); margin-top: 40px;
-        }
+        footer { background: var(--dark); color: white; padding: 50px 20px; text-align: center; margin-top: 60px; }
+        .disclosure { font-size: 0.75rem; color: #777; margin-top: 20px; border-top: 1px solid #333; padding-top: 20px; }
 
-        footer { text-align: center; padding: 40px 20px; background: var(--dark); color: white; margin-top: 60px; }
-        .footer-copyright { font-weight: 600; font-size: 1rem; color: #fff; }
-        .disclosure { font-size: 0.75rem; margin-top: 20px; font-style: italic; color: #888; border-top: 1px solid #333; padding-top: 15px; }
-
-        @media (max-width: 650px) { .product-img { width: 100%; height: auto; } header h1 { font-size: 1.8rem; } }
+        @media (max-width: 768px) { .product-img { width: 100%; height: auto; } }
     </style>
 </head>
 <body>
@@ -84,85 +77,80 @@
 
 <div class="container">
 
-    <h2 class="section-title"><i class="fas fa-link"></i> Important Digital Links</h2>
+    <div class="about-card">
+        <h2>About DigiTech Cyber</h2>
+        <p>DigiTech Cyber is a premier Digital Service Center based in <b>Bihar</b>. We specialize in providing expert assistance for <b>Aadhaar, PAN Card, Ration Card</b>, and all types of <b>Government Online Forms</b>. Our goal is to make digital services accessible to everyone while recommending the best-quality products for your home from Amazon.</p>
+    </div>
+
+    <h2 class="section-title"><i class="fas fa-id-badge"></i> Gov & Utility Services</h2>
     <div class="tools-grid">
-        <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="tool-card"><i class="fas fa-id-card"></i> Aadhaar Card</a>
+        <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="tool-card"><i class="fas fa-id-card"></i> Aadhaar Portal</a>
         <a href="https://onlineservices.tin.egov-nsdl.com/etaxwb/VerifyPAN.html" target="_blank" class="tool-card"><i class="fas fa-search"></i> Verify PAN</a>
-        <a href="https://voters.eci.gov.in/" target="_blank" class="tool-card"><i class="fas fa-user-check"></i> Voter ID</a>
-        <a href="https://rconline.bihar.gov.in/" target="_blank" class="tool-card"><i class="fas fa-shopping-basket"></i> Bihar Ration Card</a>
-        <a href="https://www.epfindia.gov.in/" target="_blank" class="tool-card"><i class="fas fa-wallet"></i> EPF Portal</a>
+        <a href="https://rconline.bihar.gov.in/" target="_blank" class="tool-card"><i class="fas fa-utensils"></i> Bihar Ration Card</a>
+        <a href="https://www.sarkariresult.com/" target="_blank" class="tool-card"><i class="fas fa-briefcase"></i> Govt Vacancy</a>
+        <a href="https://www.cibil.com/freecibilscore" target="_blank" class="tool-card"><i class="fas fa-chart-line"></i> Free CIBIL Score</a>
         <a href="https://scholarships.gov.in/" target="_blank" class="tool-card"><i class="fas fa-graduation-cap"></i> Scholarship</a>
-        <a href="https://employmentnews.gov.in/" target="_blank" class="tool-card"><i class="fas fa-newspaper"></i> Employment News</a>
     </div>
 
-    <h2 class="section-title"><i class="fab fa-amazon"></i> Best Amazon Recommendations</h2>
-    <div class="product-list">
-        
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71u9yH0-O8L._SX679_.jpg" alt="Mixer Grinder" class="product-img">
-            <div class="product-info">
-                <h3>High-Power Mixer Grinder</h3>
-                <p>Equipped with a powerful 750W motor and 3 stainless steel jars. Ideal for tough grinding like masalas and batters. Durable and stylish design.</p>
-                <div class="btn-group">
-                    <a href="https://amzn.to/4j3g8Ol" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Shop on Amazon</a>
-                    <a href="https://wa.me/918210073056" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
+    <h2 class="section-title"><i class="fab fa-amazon"></i> Handpicked Home Deals</h2>
+    
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71u9yH0-O8L._AC_SL1500_.jpg" class="product-img">
+        <div class="product-info">
+            <h3>Premium 750W Mixer Grinder</h3>
+            <p>Best-selling heavy duty mixer with 3 stainless steel jars. High performance motor for tough Indian grinding. Perfect for your kitchen.</p>
+            <div class="btn-group">
+                <a href="https://amzn.to/4j3g8Ol" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Buy on Amazon</a>
+                <a href="https://wa.me/918210073056" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Inquire</a>
             </div>
         </div>
-
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61mNn9-2v6L._SX679_.jpg" alt="Water Purifier" class="product-img">
-            <div class="product-info">
-                <h3>Advanced Water Purifier (RO+UV)</h3>
-                <p>Pure and safe drinking water with multi-stage purification technology. Removes chemicals and bacteria while retaining essential minerals.</p>
-                <div class="btn-group">
-                    <a href="https://amzn.to/4ja3LQO" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Shop on Amazon</a>
-                    <a href="https://wa.me/918210073056" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61A8-7Yh58L._SX679_.jpg" alt="Induction Cooktop" class="product-img">
-            <div class="product-info">
-                <h3>Smart Induction Cooktop</h3>
-                <p>Energy-efficient cooking with multiple preset Indian menus. Safe, fast, and very easy to clean. Perfect for modern kitchens.</p>
-                <div class="btn-group">
-                    <a href="https://amzn.to/4pVy7Zy" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Shop on Amazon</a>
-                    <a href="https://wa.me/918210073056" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71X0m4XjKqL._SX679_.jpg" alt="Washing Machine" class="product-img">
-            <div class="product-info">
-                <h3>Automatic Washing Machine</h3>
-                <p>Top-rated performance with gentle wash technology. Saves water and electricity while giving your clothes a fresh, clean look.</p>
-                <div class="btn-group">
-                    <a href="https://amzn.to/48JFVYr" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Shop on Amazon</a>
-                    <a href="https://wa.me/918210073056" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
     </div>
 
-    <div class="contact-box">
-        <h2 style="color: var(--primary);">Need Online Assistance?</h2>
-        <p>Contact us for PAN, Aadhaar, Scholarship forms, or any government documentation assistance.</p>
-        <div class="btn-group" style="justify-content: center; margin-top: 20px;">
-            <a href="tel:+918210073056" class="btn" style="background: var(--primary); color: white;"><i class="fas fa-phone-alt"></i> Call Now</a>
-            <a href="https://wa.me/918210073056" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Message Us</a>
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61mNn9-2v6L._AC_SL1500_.jpg" class="product-img">
+        <div class="product-info">
+            <h3>Advanced RO+UV Water Purifier</h3>
+            <p>Ensure 100% safe drinking water. Multi-stage purification with essential minerals. Compact and elegant design.</p>
+            <div class="btn-group">
+                <a href="https://amzn.to/4ja3LQO" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Buy on Amazon</a>
+                <a href="https://wa.me/918210073056" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Inquire</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61A8-7Yh58L._AC_SL1500_.jpg" class="product-img">
+        <div class="product-info">
+            <h3>Smart Induction Cooktop</h3>
+            <p>Energy efficient and fast cooking. Comes with preset menus for Indian cooking. Easy to clean and safe to use.</p>
+            <div class="btn-group">
+                <a href="https://amzn.to/4pVy7Zy" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Buy on Amazon</a>
+                <a href="https://wa.me/918210073056" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Inquire</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71X0m4XjKqL._AC_SL1500_.jpg" class="product-img">
+        <div class="product-info">
+            <h3>Fully Automatic Washing Machine</h3>
+            <p>High-quality cleaning with gentle care for your clothes. Low water and power consumption. Top rated for reliability.</p>
+            <div class="btn-group">
+                <a href="https://amzn.to/48JFVYr" target="_blank" class="btn btn-amazon"><i class="fab fa-amazon"></i> Buy on Amazon</a>
+                <a href="https://wa.me/918210073056" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Inquire</a>
+            </div>
         </div>
     </div>
 
 </div>
 
 <footer>
-    <p class="footer-copyright">&copy; 2025 DigiTech Cyber | All Rights Reserved</p>
-    <p style="font-size: 0.85rem; color: #bbb; margin-top: 5px;">Based in Bihar, India | Professional Digital Services</p>
-    <p class="disclosure">Disclosure: As an Amazon Associate, I earn from qualifying purchases at no extra cost to you.</p>
+    <p style="font-weight: 600; font-size: 1.2rem;">&copy; 2025 DigiTech Cyber | All Rights Reserved</p>
+    <p>Professional Digital Solutions & Handpicked Products</p>
+    <p><i class="fas fa-map-marker-alt"></i> Located in Bihar, India</p>
+    <div class="disclosure">
+        Disclosure: As an Amazon Associate, I earn from qualifying purchases at no extra cost to you.
+    </div>
 </footer>
 
 </body>
