@@ -3,159 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigiTech Cyber - Manikchowk Azamgarh</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>DigiTech-io | CSC & Amazon Hub Sitamarhi</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
+        :root { --primary: #004a99; --secondary: #003366; --success: #28a745; --orange: #ff4500; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; }
         
-        header { background: #002e5b; color: white; padding: 25px 15px; text-align: center; border-bottom: 5px solid #ff9800; }
-        .ticker { background: #ff9800; color: white; padding: 10px; font-weight: bold; font-size: 14px; }
+        /* Navigation */
+        .navbar { background-color: var(--primary); overflow: hidden; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .navbar a, .dropbtn { float: left; display: block; color: white; text-align: center; padding: 15px 18px; text-decoration: none; font-size: 15px; border: none; background: none; cursor: pointer; }
+        .navbar a:hover, .dropdown:hover .dropbtn { background-color: var(--secondary); }
+        .dropdown { float: left; overflow: hidden; }
+        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 240px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1; border-radius: 0 0 5px 5px; }
+        .dropdown-content a { color: #333; padding: 12px 16px; text-decoration: none; display: block; text-align: left; border-bottom: 1px solid #eee; }
+        .dropdown:hover .dropdown-content { display: block; }
 
-        .container { max-width: 800px; margin: auto; padding: 15px; }
+        /* Search & Banner */
+        .search-container { padding: 15px; text-align: center; background: #eef2f3; }
+        .search-container input { padding: 10px; width: 60%; border: 1px solid #ccc; border-radius: 5px 0 0 5px; outline: none; }
+        .search-container button { padding: 10px 20px; background: var(--primary); color: white; border: none; border-radius: 0 5px 5px 0; cursor: pointer; }
+        .hero-banner { background: linear-gradient(135deg, #ff4500, #ff8c00); color: white; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; margin: 20px auto; max-width: 1000px; }
 
-        /* Google Search & Amazon Section */
-        .promo-card { background: white; padding: 20px; border-radius: 15px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; border: 1px solid #ddd; }
-        .search-input { padding: 12px 20px; width: 75%; border-radius: 30px; border: 2px solid #002e5b; outline: none; margin-bottom: 10px; }
-        .search-btn { padding: 12px 25px; border-radius: 30px; background: #002e5b; color: white; border: none; cursor: pointer; font-weight: bold; }
-        
-        .hot-deal-btn {
-            display: inline-block; background: linear-gradient(45deg, #FF9900, #FFD814); color: #000 !important;
-            padding: 18px 30px; border-radius: 35px; text-decoration: none; font-weight: 900; font-size: 18px;
-            box-shadow: 0px 5px 20px rgba(255, 153, 0, 0.4); animation: pulse 1.5s infinite; margin-top: 20px; border: 2px solid #fff;
-        }
+        /* Amazon Product Grid */
+        .container { max-width: 1100px; margin: auto; padding: 20px; background: white; border-radius: 10px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
+        .product-card { border: 1px solid #ddd; padding: 15px; text-align: center; border-radius: 8px; transition: 0.3s; }
+        .product-card:hover { transform: scale(1.03); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .product-card img { width: 100%; height: 150px; object-fit: contain; margin-bottom: 10px; }
+        .buy-btn { background: #f0c14b; border: 1px solid #a88734; padding: 8px 15px; border-radius: 3px; cursor: pointer; text-decoration: none; color: #111; font-size: 13px; display: inline-block; }
 
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        /* Payment & Location */
+        .section-box { padding: 30px; text-align: center; border: 2px dashed var(--primary); border-radius: 15px; background: #f0f8ff; margin: 30px 0; }
+        .qr-image { width: 200px; border: 5px solid white; border-radius: 10px; }
+        .map-container { margin-top: 20px; border-radius: 10px; overflow: hidden; border: 1px solid #ddd; }
 
-        /* Services Grid */
-        .section-header { margin: 25px 0 15px; font-size: 22px; color: #002e5b; font-weight: bold; border-left: 5px solid #ff9800; padding-left: 10px; }
-        .services-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-        .service-box { background: white; padding: 15px 5px; border-radius: 12px; text-align: center; text-decoration: none; color: #333; border: 1px solid #e0e0e0; transition: 0.3s; }
-        .service-box:hover { border-color: #002e5b; background: #f0f7ff; }
-        .service-box i { font-size: 28px; color: #002e5b; margin-bottom: 8px; display: block; }
-        .service-box p { font-size: 13px; font-weight: bold; }
+        /* Floating Buttons */
+        .action-btns { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 2000; }
+        .fab { width: 160px; padding: 12px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; }
+        .fab-wa { background-color: #25D366; }
+        .fab-call { background-color: #007bff; }
 
-        /* Product Cards */
-        .product-item { background: white; display: flex; padding: 15px; border-radius: 15px; margin-bottom: 15px; align-items: center; border: 1px solid #eee; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .product-item img { width: 100px; height: 100px; object-fit: contain; margin-right: 15px; border-radius: 8px; }
-        .product-info { flex: 1; }
-        .action-btns { display: flex; gap: 8px; margin-top: 10px; }
-        .btn-buy { background: #002e5b; color: white; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: bold; flex: 1; text-align: center; }
-        .btn-wa { background: #25d366; color: white; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: bold; flex: 1; text-align: center; }
-
-        /* Call Now Section */
-        .call-section { text-align: center; margin: 30px 0; }
-        .call-btn { background: #d32f2f; color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-size: 20px; font-weight: bold; display: inline-block; box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4); }
-
-        /* Map */
-        .map-box { margin-top: 20px; border-radius: 15px; overflow: hidden; border: 2px solid #ddd; }
-
-        .whatsapp-fixed { position: fixed; bottom: 25px; right: 25px; z-index: 1000; }
-        footer { background: #000; color: white; text-align: center; padding: 30px; margin-top: 40px; font-size: 14px; }
+        @media screen and (max-width: 600px) { .navbar a, .dropdown { float: none; width: 100%; text-align: left; } .search-container input { width: 70%; } }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>DigiTech Cyber</h1>
-        <p style="font-size: 14px; opacity: 0.9;"><i class="fas fa-map-marker-alt"></i> Manikchowk, Azamgarh, Bihar - 843323</p>
-    </header>
-
-    <div class="ticker">
-        <marquee scrollamount="6">🚀 Ayushman Bharat, Aadhaar, PAN Card aur Sabhi Online Services ke liye Sampark Karein | Fast Service</marquee>
+<div class="navbar">
+    <a href="#home">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">Govt Schemes ▼</button>
+        <div class="dropdown-content">
+            <a href="https://myaadhaar.uidai.gov.in/">Aadhaar Card</a>
+            <a href="https://www.pan.utiitsl.com/">PAN Card</a>
+            <a href="https://voters.eci.gov.in/">Voter ID</a>
+            <a href="https://epds.bihar.gov.in/">Bihar Ration Card</a>
+            <a href="https://pmkisan.gov.in/">PM Kisan</a>
+            <a href="https://bocw.bihar.gov.in/">Bihar Labour Card</a>
+        </div>
     </div>
-
-    <div class="container">
-        
-        <div class="promo-card">
-            <form action="https://www.google.com/search" method="get" target="_blank">
-                <input type="text" name="q" class="search-input" placeholder="Google Search Karein...">
-                <button type="submit" class="search-btn"><i class="fas fa-search"></i> Google Search</button>
-            </form>
-            <div style="border-top: 1px dashed #ccc; margin: 20px 0;"></div>
-            <p style="color:red; font-weight:bold; font-size:14px;">🔥 SPECIAL HOT DEALS 👇</p>
-            <a href="https://www.amazon.in/?tag=digitech0804-21" target="_blank" class="hot-deal-btn">
-                <i class="fab fa-amazon"></i> VISIT MY AMAZON STORE
-            </a>
+    <div class="dropdown">
+        <button class="dropbtn">Banking & Loans ▼</button>
+        <div class="dropdown-content">
+            <a href="https://www.cibil.com/freecreditscore">Free CIBIL Score</a>
+            <a href="#contact">Personal/Home Loan</a>
+            <a href="#contact">Vehicle Finance</a>
         </div>
-
-        <h2 class="section-header">Digital Services</h2>
-        <div class="services-container">
-            <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="service-box"><i class="fas fa-fingerprint"></i><p>Aadhaar</p></a>
-            <a href="https://voters.eci.gov.in/" target="_blank" class="service-box"><i class="fas fa-id-card"></i><p>Voter ID</p></a>
-            <a href="https://serviceonline.bihar.gov.in/" target="_blank" class="service-box"><i class="fas fa-file-invoice"></i><p>RTPS Bihar</p></a>
-            <a href="https://epds.bihar.gov.in/" target="_blank" class="service-box"><i class="fas fa-shopping-basket"></i><p>Ration Card</p></a>
-            <a href="https://share.google/ZNYfWlVPVAeoCRNDB" target="_blank" class="service-box"><i class="fas fa-heartbeat" style="color:#e91e63;"></i><p>Ayushman</p></a>
-            <a href="https://enam.gov.in/" target="_blank" class="service-box"><i class="fas fa-seedling"></i><p>eNam Portal</p></a>
-        </div>
-
-        <h2 class="section-header">Hot Product Deals</h2>
-        
-        <div class="product-item">
-            <img src="mixer.jpg" alt="Mixer">
-            <div class="product-info">
-                <h3>Heavy Duty Mixer Grinder</h3>
-                <div class="action-btns">
-                    <a href="https://amzn.to/3YCf7Ds" target="_blank" class="btn-buy">Buy Now</a>
-                    <a href="https://wa.me/918210073056?text=Interested in Mixer Grinder" class="btn-wa">Enquiry</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="product-item">
-            <img src="purifier.jpg" alt="Purifier">
-            <div class="product-info">
-                <h3>Advanced Water Purifier</h3>
-                <div class="action-btns">
-                    <a href="https://amzn.to/4p6OzVZ" target="_blank" class="btn-buy">Buy Now</a>
-                    <a href="https://wa.me/918210073056?text=Interested in Water Purifier" class="btn-wa">Enquiry</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="product-item">
-            <img src="induction.jpg" alt="Induction">
-            <div class="product-info">
-                <h3>Smart Induction Cooktop</h3>
-                <div class="action-btns">
-                    <a href="https://amzn.to/496ohNr" target="_blank" class="btn-buy">Buy Now</a>
-                    <a href="https://wa.me/918210073056?text=Interested in Induction" class="btn-wa">Enquiry</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="product-item">
-            <img src="washing_machine.jpg" alt="Washing Machine">
-            <div class="product-info">
-                <h3>Automatic Washing Machine</h3>
-                <div class="action-btns">
-                    <a href="https://amzn.to/44Biiip" target="_blank" class="btn-buy">Buy Now</a>
-                    <a href="https://wa.me/918210073056?text=Interested in Washing Machine" class="btn-wa">Enquiry</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="call-section">
-            <a href="tel:8210073056" class="call-btn">
-                <i class="fas fa-phone-alt"></i> CALL NOW: 8210073056
-            </a>
-        </div>
-
-        <h2 class="section-header">Visit Our Shop</h2>
-        <div class="map-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14332.333891465225!2d85.3957813!3d26.0964175!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!4t13.1!3m3!1m2!1s0x39ed1108259f635f%3A0xc4f4477b7077699d!2sManik%20Chowk%2C%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-
     </div>
+    <a href="#amazon">Amazon Deals</a>
+    <a href="#location">Find Us</a>
+</div>
 
-    <a href="https://wa.me/918210073056" class="whatsapp-fixed" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:60px; height:60px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
-    </a>
+<div class="search-container">
+    <form action="https://www.google.com/search" method="GET" target="_blank">
+        <input type="text" name="q" placeholder="Google Search..." required>
+        <button type="submit">Search</button>
+    </form>
+</div>
 
-    <footer>
-        <p><b>DigiTech Cyber, Manikchowk</b></p>
-        <p>© 2025 All Rights Reserved</p>
-    </footer>
+<div class="hero-banner">⚡ Amazon Hot Deals: Up to 70% Off on Electronics! ⚡</div>
+
+<div class="container" id="home">
+    
+    <section id="amazon">
+        <h2 style="color: var(--orange); border-bottom: 2px solid var(--orange);">🔥 Featured Amazon Deals</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71ZDYRSmsWL._SL1500_.jpg" alt="Smartphone">
+                <p>Latest Smartphones</p>
+                <a href="https://www.amazon.in/s?k=smartphone&tag=8210073056-21" class="buy-btn">View Deals</a>
+            </div>
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/61SSZ-F57bL._SL1500_.jpg" alt="Laptop">
+                <p>High Speed Laptops</p>
+                <a href="https://www.amazon.in/s?k=laptop&tag=8210073056-21" class="buy-btn">View Deals</a>
+            </div>
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/61O0t75GzDL._SL1500_.jpg" alt="Accessories">
+                <p>Best Accessories</p>
+                <a href="https://www.amazon.in/s?k=mobile+accessories&tag=8210073056-21" class="buy-btn">View Deals</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-box">
+        <h2 style="margin-top:0;">Safe QR Payment</h2>
+        <p>Scan to Pay via GPay/PhonePe</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=chamanjha2015-1@okhdfcbank%26pn=DigiTech-io%26cu=INR" class="qr-image" alt="QR Code">
+        <p><strong>UPI ID: chamanjha2015-1@okhdfcbank</strong></p>
+        <a href="upi://pay?pa=chamanjha2015-1@okhdfcbank&pn=DigiTech-io&cu=INR" style="background:var(--success); color:white; padding:12px 25px; text-decoration:none; border-radius:5px; font-weight:bold;">📱 Click to Pay</a>
+    </section>
+
+    <section id="location">
+        <h2>Our Center Location</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114620.08375631247!2d85.42230678857422!3d26.58826768395568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed098495a86471%3A0x6e2f694200842095!2sSitamarhi%2C%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+</div>
+
+<div class="action-btns">
+    <a href="tel:+918210073056" class="fab fab-call">📞 Call Now</a>
+    <a href="https://wa.me/918210073056?text=Hi, mujhe enquiry karni hai..." class="fab fab-wa">💬 WhatsApp Chat</a>
+</div>
 
 </body>
 </html>
