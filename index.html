@@ -3,147 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigiTech-io | Premium Digital Portal 2026</title>
+    <title>DigiTech-io | Ultimate Digital Portal 2026</title>
     <style>
         :root { --primary: #004a99; --accent: #ff4500; --success: #25D366; --light: #f4f7f6; --gold: #ffd700; --dark: #1a1a1b; --call: #d32f2f; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background: var(--light); color: #333; transition: 0.3s; overflow-x: hidden; }
         .dark-mode { background: var(--dark); color: white; }
 
-        header { background: #fff; padding: 20px; text-align: center; border-bottom: 5px solid var(--primary); }
-        .logo { font-size: 35px; font-weight: 900; color: var(--primary); letter-spacing: 2px; margin: 0; }
+        header { background: #fff; padding: 15px; text-align: center; border-bottom: 5px solid var(--primary); position: sticky; top: 0; z-index: 2000; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .logo { font-size: 32px; font-weight: 900; color: var(--primary); letter-spacing: 2px; margin: 0; }
         
         /* Action Buttons Header */
-        .action-group { margin-top: 15px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
-        .action-btn { color: white; border: none; padding: 12px 20px; border-radius: 25px; cursor: pointer; font-weight: bold; font-size: 13px; display: flex; align-items: center; gap: 8px; transition: 0.3s; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
-        .action-btn:hover { transform: scale(1.05); filter: brightness(1.2); }
+        .action-group { margin-top: 12px; display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+        .action-btn { color: white; border: none; padding: 10px 16px; border-radius: 20px; cursor: pointer; font-weight: bold; font-size: 12px; display: flex; align-items: center; gap: 6px; transition: 0.3s; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .action-btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
 
-        /* Flashing Product Animation */
-        @keyframes neonFlash { 
-            0% { filter: brightness(1) drop-shadow(0 0 2px var(--primary)); }
-            50% { filter: brightness(1.3) drop-shadow(0 0 15px var(--gold)); transform: scale(1.05); }
-            100% { filter: brightness(1) drop-shadow(0 0 2px var(--primary)); }
+        /* Neon Flashing Animation */
+        @keyframes neonPulse { 
+            0% { filter: drop-shadow(0 0 2px var(--primary)); border: 1px solid #eee; }
+            50% { filter: drop-shadow(0 0 10px var(--gold)); border: 1px solid var(--gold); transform: scale(1.02); }
+            100% { filter: drop-shadow(0 0 2px var(--primary)); border: 1px solid #eee; }
         }
-        .flash-img { width: 100%; height: 180px; object-fit: contain; animation: neonFlash 3s infinite ease-in-out; border-radius: 10px; }
+        .flash-card { animation: neonPulse 3s infinite ease-in-out; }
+        .product-img { width: 100%; height: 160px; object-fit: contain; }
 
-        /* Navigation */
-        .navbar { background: var(--primary); position: sticky; top: 0; z-index: 1000; display: flex; flex-wrap: wrap; justify-content: center; }
-        .navbar a, .dropbtn { color: white; padding: 15px; text-decoration: none; font-weight: bold; font-size: 13px; cursor: pointer; border: none; background: none; }
-        .navbar a:hover { background: #003366; }
+        /* Navbar & Dropdowns */
+        .navbar { background: var(--primary); display: flex; flex-wrap: wrap; justify-content: center; border-bottom: 2px solid var(--gold); }
+        .navbar a, .dropbtn { color: white; padding: 14px 18px; text-decoration: none; font-weight: bold; font-size: 13px; cursor: pointer; border: none; background: none; }
+        .navbar a:hover, .dropdown:hover .dropbtn { background: #003366; }
         .dropdown { position: relative; }
-        .dropdown-content { display: none; position: absolute; background: white; min-width: 220px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1001; }
+        .dropdown-content { display: none; position: absolute; background: white; min-width: 220px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1001; border-radius: 0 0 10px 10px; }
         .dropdown-content a { color: #333 !important; padding: 12px; display: block; border-bottom: 1px solid #eee; text-align: left; }
         .dropdown:hover .dropdown-content { display: block; }
 
         /* Ticker */
-        .ticker-wrap { background: #222; color: var(--gold); padding: 10px 0; overflow: hidden; white-space: nowrap; }
+        .ticker-wrap { background: #222; color: var(--gold); padding: 8px 0; overflow: hidden; white-space: nowrap; }
         .ticker { display: inline-block; animation: tickerMove 25s linear infinite; font-weight: bold; }
         @keyframes tickerMove { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 
-        /* Layout */
-        .container { max-width: 1200px; margin: 25px auto; padding: 25px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .dark-mode .container, .dark-mode header, .dark-mode .card { background: #26262b; color: white; border-color: #444; }
+        /* Container & Layout */
+        .container { max-width: 1200px; margin: 20px auto; padding: 20px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .dark-mode .container, .dark-mode header, .dark-mode .card, .dark-mode .about-box { background: #26262b; color: white; border-color: #444; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-        .card { border: 1px solid #eee; padding: 20px; text-align: center; border-radius: 15px; background: #fff; transition: 0.3s; }
+        .card { border: 1px solid #eee; padding: 15px; text-align: center; border-radius: 15px; background: #fff; transition: 0.3s; }
 
-        /* Modals (Location & QR) */
-        .modal { display: none; position: fixed; z-index: 3000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
-        .modal-content { background: white; margin: 5% auto; padding: 25px; width: 80%; max-width: 600px; text-align: center; border-radius: 20px; position: relative; }
-        .dark-mode .modal-content { background: #26262b; }
+        /* Modal Settings */
+        .modal { display: none; position: fixed; z-index: 3000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); }
+        .modal-content { background: white; margin: 5% auto; padding: 20px; width: 90%; max-width: 600px; text-align: center; border-radius: 20px; position: relative; animation: slideDown 0.4s; }
+        @keyframes slideDown { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
-        /* Footer & FAB */
-        footer { text-align: center; padding: 40px; background: #222; color: #fff; margin-top: 50px; }
-        .fab-group { position: fixed; bottom: 25px; right: 25px; display: flex; flex-direction: column; gap: 12px; z-index: 2000; }
-        .fab { width: 195px; padding: 15px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.3); font-size: 14px; }
+        /* FAB */
+        .fab-group { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 2000; }
+        .fab { width: 180px; padding: 12px; border-radius: 30px; text-decoration: none; color: white; font-weight: bold; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); font-size: 13px; }
+
+        footer { text-align: center; padding: 40px; background: #222; color: #fff; margin-top: 40px; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo">DIGITECH-IO</div>
-    <div id="live-clock" style="font-weight:bold; color:#666; font-size:13px;">Loading...</div>
+    <div id="live-clock" style="font-weight:bold; color:#666; font-size:12px;">Loading Time...</div>
     
     <div class="action-group">
-        <button class="action-btn" style="background:var(--primary);" onclick="showModal('qrModal')">💳 Pay Fees (QR)</button>
-        <button class="action-btn" style="background:var(--success);" onclick="showModal('locModal')">📍 Live Location</button>
+        <button class="action-btn" style="background:var(--primary);" onclick="openM('qrM')">💳 Pay Now (QR)</button>
+        <button class="action-btn" style="background:var(--success);" onclick="openM('locM')">📍 Live Location</button>
         <a href="tel:+918210073056" class="action-btn" style="background:var(--call);">📞 Call Support</a>
     </div>
 </header>
 
-<div id="qrModal" class="modal" onclick="closeModal('qrModal')">
+<div id="qrM" class="modal" onclick="closeM('qrM')">
     <div class="modal-content" onclick="event.stopPropagation()">
-        <h3>Secure Payment QR</h3>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=chamanjha2015-1@okhdfcbank%26pn=DigiTech-io" style="width:250px;">
-        <p>UPI ID: chamanjha2015-1@okhdfcbank</p>
-        <button onclick="closeModal('qrModal')">Close</button>
+        <h3>Scan to Pay Fees</h3>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=chamanjha2015-1@okhdfcbank%26pn=DigiTech-io" style="width:220px; border: 5px solid #f0f0f0;">
+        <p>UPI ID: <b>chamanjha2015-1@okhdfcbank</b></p>
+        <button onclick="closeM('qrM')" style="padding:10px 20px; cursor:pointer;">Close</button>
     </div>
 </div>
 
-<div id="locModal" class="modal" onclick="closeModal('locModal')">
+<div id="locM" class="modal" onclick="closeM('locM')">
     <div class="modal-content" onclick="event.stopPropagation()">
-        <h3>Our Office Location</h3>
-        <iframe src="http://googleusercontent.com/maps.google.com/9" width="100%" height="350" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy"></iframe>
-        <p>Sitamarhi, Bihar</p>
-        <button onclick="closeModal('locModal')">Close</button>
+        <h3>Find Us in Sitamarhi</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57161.73356066266!2d85.45424599182054!3d26.59620577934449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed098416d82d49%3A0x6734771767425f16!2sSitamarhi%2C%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000" width="100%" height="350" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy"></iframe>
+        <button onclick="closeM('locM')" style="margin-top:10px; padding:10px 20px; cursor:pointer;">Close</button>
     </div>
 </div>
 
 <div class="ticker-wrap">
-    <div class="ticker">🚀 New Update: Voter ID & Driving Licence Applied Online | Professional Voice Generation for Business Growth | Visit our Pinterest Store for Designs! 🚀</div>
+    <div class="ticker">🔥 Aadhaar, PAN, Ration Card, BOCW, NSP Scholarship & Driving Licence Applied Here! | 🎙️ High-Quality Voice Generation for Business Promotion! | 🏠 CSC Loans Available! 🔥</div>
 </div>
 
 <div class="navbar">
     <a href="#home">Home</a>
     <div class="dropdown">
-        <button class="dropbtn">Govt Services ▼</button>
+        <button class="dropbtn">Govt Schemes ▼</button>
         <div class="dropdown-content">
             <a href="https://myaadhaar.uidai.gov.in/" target="_blank">Aadhaar Card</a>
+            <a href="https://www.pan.utiitsl.com/" target="_blank">PAN Card App</a>
             <a href="https://voters.eci.gov.in/" target="_blank">Voter ID Apply</a>
             <a href="https://rconline.bihar.gov.in/" target="_blank">Bihar Ration Card</a>
-            <a href="https://scholarships.gov.in/" target="_blank">National Scholarship</a>
+            <a href="https://bocwscheme.bihar.gov.in/" target="_blank">Bihar BOCW Card</a>
+            <a href="https://scholarships.gov.in/" target="_blank">National Scholarship (NSP)</a>
             <a href="https://sarathi.parivahan.gov.in/" target="_blank">Driving Licence</a>
+            <a href="https://pmkisan.gov.in/" target="_blank">PM Kisan Status</a>
+            <a href="https://sspmis.bihar.gov.in/" target="_blank">SSPMIS Pension</a>
         </div>
     </div>
-    <a href="https://www.pinterest.com/devigunjan039/" target="_blank">Pinterest Account</a>
-    <a href="#deals">Amazon Shop</a>
+    <div class="dropdown">
+        <button class="dropbtn">Banking Hub ▼</button>
+        <div class="dropdown-content">
+            <a href="https://civilcalc.com/en/" target="_blank">Free CIBIL Check</a>
+            <a href="https://wa.me/918210073056?text=Hi, I want to apply for a Personal/Home Loan" target="_blank">Personal/Home Loan</a>
+            <a href="https://wa.me/918210073056?text=Interested in Business Loan for my Shop" target="_blank">Business Loans</a>
+        </div>
+    </div>
+    <a href="https://www.pinterest.com/devigunjan039/" target="_blank">Designs (Pinterest)</a>
+    <a href="#deals">Shop Amazon</a>
 </div>
 
 <div class="container" id="home">
-    <section style="background: linear-gradient(135deg, #004a99, #001524); color: white; padding: 40px; border-radius: 20px; text-align: center; border: 2px solid var(--gold);">
-        <h2 style="color:var(--gold);">🎙️ Professional Business Promotion</h2>
-        <p>Enhance your shop's sales with High-Tech AI Voice Over & Video Generation services.</p>
-        <a href="https://wa.me/918210073056?text=Hi, I want a Promotion Video with Voice Over" style="background:var(--gold); color:black; padding:15px 30px; border-radius:30px; text-decoration:none; font-weight:bold; display:inline-block;">Inquire on WhatsApp</a>
+    <section style="background: linear-gradient(135deg, #004a99, #001524); color: white; padding: 35px; border-radius: 20px; text-align: center; border: 2px solid var(--gold); margin-bottom:30px;">
+        <h2 style="color:var(--gold); margin:0;">🎙️ PROMOTE YOUR BUSINESS WITH ME</h2>
+        <p>Get Professional AI Voice-Over & Shop Promotion Videos to grow your sales instantly!</p>
+        <a href="https://wa.me/918210073056?text=Hi, I want to Promote my Business with Professional Voice Over Service" style="background:var(--gold); color:black; padding:12px 25px; border-radius:30px; text-decoration:none; font-weight:bold; display:inline-block; margin-top:10px;">Inquire via WhatsApp</a>
     </section>
 
-    <section id="deals" style="margin-top:40px;">
-        <h2 style="color: var(--accent);">🔥 Hot Deals (Flashing Products)</h2>
+    <section id="deals">
+        <h2 style="color: var(--primary); border-left: 5px solid var(--accent); padding-left: 10px;">🔥 Trending Amazon Deals (ID: 8210073056-21)</h2>
         <div class="grid">
-            <div class="card">
-                <img class="flash-img" src="https://m.media-amazon.com/images/I/81Os1rn7pXL._AC_SL1500_.jpg" onerror="this.src='https://placehold.co/400x400?text=Smartphone+Sale';" alt="Mobile">
-                <p>New 5G Mobiles</p>
-                <a href="https://www.amazon.in/s?k=smartphone&tag=8210073056-21" style="background:var(--primary); color:white; padding:10px; display:block; text-decoration:none; border-radius:5px;" target="_blank">View on Amazon</a>
+            <div class="card flash-card">
+                <img class="product-img" src="https://m.media-amazon.com/images/I/81Os1rn7pXL._AC_SL1500_.jpg" onerror="this.src='https://placehold.co/400x400?text=5G+Smartphone';" alt="Mobile">
+                <p>New Gen 5G Mobiles</p>
+                <a href="https://www.amazon.in/s?k=smartphone&tag=8210073056-21" style="background:var(--primary); color:white; padding:10px; display:block; text-decoration:none; border-radius:5px;" target="_blank">Shop Now</a>
             </div>
-            <div class="card">
-                <img class="flash-img" src="https://m.media-amazon.com/images/I/71TPda7cwUL._AC_SL1500_.jpg" onerror="this.src='https://placehold.co/400x400?text=Laptop+Offer';" alt="Laptop">
+            <div class="card flash-card">
+                <img class="product-img" src="https://m.media-amazon.com/images/I/71TPda7cwUL._AC_SL1500_.jpg" onerror="this.src='https://placehold.co/400x400?text=Laptop+Offer';" alt="Laptop">
                 <p>Performance Laptops</p>
-                <a href="https://www.amazon.in/s?k=laptop&tag=8210073056-21" style="background:var(--primary); color:white; padding:10px; display:block; text-decoration:none; border-radius:5px;" target="_blank">View on Amazon</a>
+                <a href="https://www.amazon.in/s?k=laptop&tag=8210073056-21" style="background:var(--primary); color:white; padding:10px; display:block; text-decoration:none; border-radius:5px;" target="_blank">Shop Now</a>
             </div>
-            <div class="card">
-                <img class="flash-img" src="https://m.media-amazon.com/images/I/61ZjlBOp+rL._AC_SL1500_.jpg" onerror="this.src='https://placehold.co/400x400?text=Smartwatch+Offer';" alt="Gadgets">
-                <p>Smart Gadgets</p>
-                <a href="https://www.amazon.in/s?k=smartwatch&tag=8210073056-21" style="background:var(--primary); color:white; padding:10px; display:block; text-decoration:none; border-radius:5px;" target="_blank">View on Amazon</a>
+            <div class="card flash-card">
+                <img class="product-img" src="https://m.media-amazon.com/images/I/61ZjlBOp+rL._AC_SL1500_.jpg" onerror="this.src='https://placehold.co/400x400?text=Smartwatch+Deals';" alt="Watch">
+                <p>Advanced Smartwatches</p>
+                <a href="https://www.amazon.in/s?k=smartwatch&tag=8210073056-21" style="background:var(--primary); color:white; padding:10px; display:block; text-decoration:none; border-radius:5px;" target="_blank">Shop Now</a>
             </div>
+        </div>
+    </section>
+
+    <section style="margin-top: 30px;">
+        <h2 style="color:var(--primary);">🎬 Entertainment Hub</h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));">
+            <a href="https://www.youtube.com" target="_blank" style="background:#FF0000; color:white; padding:15px; border-radius:10px; text-decoration:none; text-align:center; font-weight:bold;">YouTube</a>
+            <a href="https://www.imdb.com" target="_blank" style="background:#f5c518; color:black; padding:15px; border-radius:10px; text-decoration:none; text-align:center; font-weight:bold;">IMDb Hub</a>
+            <a href="https://www.pinterest.com/devigunjan039/" target="_blank" style="background:#E60023; color:white; padding:15px; border-radius:10px; text-decoration:none; text-align:center; font-weight:bold;">Designs</a>
         </div>
     </section>
 </div>
 
 <footer>
     <p>© DigiTech-io All Rights Reserved 2026 | Sitamarhi, Bihar</p>
-    <button onclick="document.body.classList.toggle('dark-mode')" style="background:var(--gold); border:none; padding:8px 15px; cursor:pointer; border-radius:5px;">Toggle Theme</button>
+    <p>Live Visitors Today: 18,482 | <button onclick="document.body.classList.toggle('dark-mode')" style="background:none; border:1px solid #fff; color:#fff; cursor:pointer; padding:5px 10px; border-radius:5px;">Toggle Dark Mode</button></p>
 </footer>
 
 <div class="fab-group">
-    <a href="tel:+918210073056" class="fab" style="background:#007bff; text-decoration:none;">📞 Call Support</a>
-    <a href="https://wa.me/918210073056?text=Hi, Help me with CSC Services" class="fab" style="background:#25D366; text-decoration:none;">💬 WhatsApp Enquiry</a>
+    <a href="tel:+918210073056" class="fab" style="background:#007bff; text-decoration:none;">📞 Call Support Now</a>
+    <a href="https://wa.me/918210073056?text=Hi, Help me with DigiTech Services" class="fab" style="background:#25D366; text-decoration:none;">💬 WhatsApp Enquiry</a>
 </div>
 
 <script>
@@ -154,8 +176,8 @@
     setInterval(updateClock, 1000);
     updateClock();
 
-    function showModal(id) { document.getElementById(id).style.display = 'block'; }
-    function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+    function openM(id) { document.getElementById(id).style.display = 'block'; }
+    function closeM(id) { document.getElementById(id).style.display = 'none'; }
 </script>
 
 </body>
