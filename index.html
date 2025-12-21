@@ -101,17 +101,18 @@
 <!-- NAVBAR -->
 <div class="navbar">
     <a href="#home">Home</a>
+
     <div class="dropdown">
         <button class="dropbtn">Govt Schemes ▼</button>
         <div class="dropdown-content">
-            <a href="https://wa.me/918210073056?text=Apply%20for%20Aadhaar%20Card">Aadhaar Card</a>
-            <a href="https://wa.me/918210073056?text=Apply%20for%20Bihar%20Ration%20Card">Bihar Ration Card</a>
-            <a href="https://wa.me/918210073056?text=New%20Voter%20ID%20Application">Voter ID Apply</a>
-            <a href="https://wa.me/918210073056?text=BOCW%20Shramik%20Card%20Help">BOCW Card</a>
-            <a href="https://wa.me/918210073056?text=Ayushman%20Card%20Enquiry">Ayushman Card</a>
-            <a href="https://wa.me/918210073056?text=Any%20other%20Govt%20Scheme%20Help">Other Schemes</a>
+            <a href="https://serviceonline.bihar.gov.in" target="_blank">RTPS Bihar (Caste/Income/Residence)</a>
+            <a href="https://epds.bihar.gov.in" target="_blank">RCMS Ration Card Bihar</a>
+            <a href="https://pmkisan.gov.in" target="_blank">PM Kisan Portal</a>
+            <a href="https://www.bihar.gov.in" target="_blank">Bihar Government Portal</a>
+            <a href="https://wa.me/918210073056?text=Need%20help%20for%20any%20Bihar%20scheme">Ask Help on WhatsApp</a>
         </div>
     </div>
+
     <div class="dropdown">
         <button class="dropbtn">Banking & CIBIL ▼</button>
         <div class="dropdown-content">
@@ -120,6 +121,7 @@
             <a href="https://wa.me/918210073056?text=Credit%20Card%20Support">Credit Card Help</a>
         </div>
     </div>
+
     <a href="#products">5G Store</a>
     <a href="#articles">Articles</a>
     <a href="#about">About</a>
@@ -134,10 +136,11 @@
             <input type="text" name="q" class="search-box" placeholder="Search Govt schemes, exams, jobs or products..." required>
             <button type="submit" class="search-btn">Search</button>
         </form>
-        <p style="margin-top:6px;font-size:12px;">Tip: Yahin se direct PM Kisan status, Ration Card, exam form, product reviews sab search kar sakte hain.</p>
+        <p style="margin-top:6px;font-size:12px;">Yahin se PM Kisan status, Ration Card, exam forms, product reviews, sab search kar sakte hain.</p>
     </div>
 
     <div id="location-section">
+        <!-- apna real Google Maps embed code yahan paste karein -->
         <iframe src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE"
                 width="100%" height="320" style="border:0;" allowfullscreen loading="lazy"></iframe>
     </div>
@@ -213,36 +216,52 @@
     <!-- ARTICLES / BLOG PREVIEW -->
     <section id="articles">
         <h2>Daily Articles & Guides</h2>
-        <p style="font-size:13px;margin-bottom:8px;">Roz ke hisaab se yahan nayi posts add karo – Govt schemes, online services, product reviews, CSC tips, exam info, etc.</p>
+
+        <!-- AI-style idea box -->
+        <div style="background:#eef2f3;border-radius:10px;padding:12px 14px;margin-bottom:14px;font-size:13px;">
+            <strong>AI Article Helper (Manual):</strong>
+            <p style="margin-top:4px;">Aaj ke liye koi ek topic choose karo, title copy karke article likho:</p>
+            <ul style="margin-left:16px;margin-top:4px;">
+                <li>“PM Kisan status kaise check karein – full online guide”</li>
+                <li>“Bihar Ration Card new apply 2026 – step by step process”</li>
+                <li>“Best 5G mobile under ₹10,000 for students & gaming”</li>
+                <li>“CSC VLE ke liye 10 nayi earning services”</li>
+                <li>“Railway / SSC form fill karte waqt 7 common mistakes”</li>
+            </ul>
+            <p style="margin-top:4px;">Har din 1 topic utha kar naya article banao aur neeche wale cards ke link me uska page jod do.</p>
+        </div>
+
         <div class="grid">
             <div class="card">
                 <span class="badge">Govt Scheme</span>
-                <h3>PM Kisan Status kaise check karein (Step-by-step)</h3>
+                <h3>PM Kisan Status Guide</h3>
                 <p>Portal link, required details aur common errors ka simple guide.</p>
                 <a class="action-btn" style="background:var(--primary);display:block;justify-content:center;"
                    href="articles/pm-kisan-status.html">Read Full Article</a>
             </div>
             <div class="card">
-                <span class="badge">Online Services</span>
-                <h3>Bihar Ration Card Online Apply – 2026 Updated Process</h3>
-                <p>Documents, fees, portal screenshots aur tracking method.</p>
+                <span class="badge">Online Service</span>
+                <h3>Bihar Ration Card Apply 2026</h3>
+                <p>Documents, fees, portal screenshots aur status check method.</p>
                 <a class="action-btn" style="background:var(--primary);display:block;justify-content:center;"
                    href="articles/bihar-ration-card-apply.html">Read Full Article</a>
             </div>
             <div class="card">
                 <span class="badge">Product Review</span>
-                <h3>Best 5G Mobile under ₹10,000 – Student & Gaming Guide</h3>
-                <p>Top 3 phones ke pros/cons aur Amazon links.</p>
+                <h3>Best 5G Mobile under ₹10,000</h3>
+                <p>Top 3 phones ke pros/cons aur Amazon links ek jagah.</p>
                 <a class="action-btn" style="background:var(--primary);display:block;justify-content:center;"
                    href="articles/best-5g-under-10k.html">Read Full Article</a>
             </div>
         </div>
-        <p style="font-size:12px;margin-top:8px;">Note: Agar abhi separate article pages nahi hain to upar wale links temporarily <code>#</code> rakh sakte ho, baad me HTML pages bana kar update karo.</p>
+
+        <p style="font-size:12px;margin-top:8px;">Note: Jab tak alag HTML article pages nahi banate, upar wale links temporarily <code>#</code> rakh sakte ho.</p>
     </section>
 
     <!-- CONTACT + POLICIES SHORT -->
     <section id="contact">
         <h2>Contact & Policies</h2>
+
         <h3>Contact / Support</h3>
         <ul>
             <li><strong>WhatsApp:</strong> <a href="https://wa.me/918210073056?text=Hi%20DigiTech,%20I%20need%20help">Click to chat</a></li>
@@ -252,16 +271,16 @@
         </ul>
 
         <h3>Privacy Policy (Short)</h3>
-        <p>Hum sirf aapka naam, mobile number aur order / service details store karte hain taaki service provide ki ja sake. Data kisi third party ko sell nahi kiya jata. Detailed policy jaldi hi separate page par add hogi.</p>
+        <p>Hum sirf aapka naam, mobile number aur order / service details store karte hain taaki service provide ki ja sake. Data kisi third party ko sell nahi kiya jata. Detailed policy baad me separate page par add hogi.</p>
 
         <h3>Disclaimer</h3>
-        <p>Govt schemes, exam dates aur product prices waqt‑waqt par change ho sakte hain. Final information hamesha official website / seller se verify karein. Amazon links affiliate ho sakte hain, jisse hame chhota commission mil sakta hai – aapka price same rahega.</p>
+        <p>Govt schemes, exam dates aur product prices waqt‑waqt par change ho sakte hain. Final information hamesha official website / seller se verify karein. Amazon links affiliate ho sakte hain jisse hame chhota commission mil sakta hai; aapka price same rehta hai.</p>
 
         <h3>Terms & Conditions</h3>
         <ul>
             <li>Kuch services / products ke liye advance UPI payment jaruri ho sakta hai.</li>
             <li>Delivery time courier / platform ke hisaab se change hota hai.</li>
-            <li>Returns / refunds hamesha respective platform (Amazon, govt portal, bank) ki policy ke according honge.</li>
+            <li>Returns / refunds respective platform (Amazon, govt portal, bank) ki policy ke according honge.</li>
         </ul>
     </section>
 
@@ -269,7 +288,7 @@
 
 <footer>
     <p>© 2026 DigiTech-io Master Hub | Sitamarhi / Samastipur, Bihar</p>
-    <p>Visitors Today: 15,842 (demo count) |
+    <p>Visitors Today: 15,842 (demo) |
         <button onclick="document.body.classList.toggle('dark-mode')"
                 style="background:none;border:1px solid #555;color:#ccc;padding:4px 10px;border-radius:15px;cursor:pointer;">
             Theme Mode
@@ -280,7 +299,7 @@
 <script>
     function updateClock(){
         const now=new Date();
-        document.getElementById('live-clock').innerText=
+        document.getElementById('live-clock').innerText =
             now.toDateString()+" | "+now.toLocaleTimeString();
     }
     setInterval(updateClock,1000);updateClock();
