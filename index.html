@@ -326,6 +326,44 @@
     function animate(){ctx.clearRect(0,0,canvas.width,canvas.height);particles.forEach(p=>{p.update();p.draw();});requestAnimationFrame(animate);}
     init();animate();
 </script>
+<hr>
+<footer style="text-align: center; padding: 20px; font-family: Arial, sans-serif; background-color: #f9f9f9;">
+    <h3>Patna AI Studio Pro</h3>
+    <p>Official Digital Services for Bihar Panchayat Election Campaigns</p>
+    
+    <div style="margin: 20px 0;">
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <button id="rzp-button1" style="background-color: #27ae60; color: white; padding: 12px 25px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+            💳 PAY FOR CAMPAIGN
+        </button>
+    </div>
+
+    <div style="margin-top: 10px;">
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="terms.html">Terms & Conditions</a> | 
+        <a href="refund.html">Refund Policy</a>
+    </div>
+    <p style="font-size: 12px; color: gray; margin-top: 15px;">Contact: chamanjha2015@gmail.com | Patna, Bihar</p>
+
+    <script>
+    var options = {
+        "key": "rzp_test_RzNCtwgr2LMD2q", // Aapki Test Key ID
+        "amount": "100000", // ₹1000 ke liye (paise mein)
+        "currency": "INR",
+        "name": "Patna AI Studio Pro",
+        "description": "Election Campaign Service",
+        "handler": function (response){
+            alert("Payment Successful! ID: " + response.razorpay_payment_id);
+        },
+        "theme": { "color": "#0056b3" }
+    };
+    var rzp1 = new Razorpay(options);
+    document.getElementById('rzp-button1').onclick = function(e){
+        rzp1.open();
+        e.preventDefault();
+    }
+    </script>
+</footer>
 
 </body>
 </html>
