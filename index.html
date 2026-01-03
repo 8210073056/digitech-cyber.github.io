@@ -22,6 +22,7 @@
         .card{border:1px solid #eee;border-radius:12px;padding:20px;text-align:center;background:#fff;transition:.3s;}
         .card:hover{transform:translateY(-5px);box-shadow:0 8px 15px rgba(0,0,0,0.1);}
         .badge{display:inline-block;background:var(--gold);color:#000;padding:2px 8px;border-radius:5px;font-size:11px;font-weight:bold;margin-bottom:10px;}
+        .lang-badge{background:#eef2f3; color:var(--primary); padding:4px 12px; border-radius:15px; font-size:12px; font-weight:bold; border:1px solid var(--primary);}
         table{width:100%;border-collapse:collapse;margin-top:15px;font-size:14px;}
         th, td{padding:12px;border:1px solid #ddd;text-align:left;}
         th{background:var(--primary);color:white;}
@@ -33,7 +34,7 @@
 
 <header>
     <div class="logo">PATNA AI STUDIO PRO</div>
-    <div class="tagline">Super AI Brain for Bihar Elections: Mukhiya, Sarpanch & Ward Members</div>
+    <div class="tagline">Bihar's Super AI Brain: Multi-Dialect Professional Election Ads</div>
     <div class="action-group">
         <a href="tel:+918210073056" class="action-btn" style="background:var(--call);">📞 CALL NOW</a>
         <a href="https://wa.me/918210073056" class="action-btn" style="background:var(--success);">💬 WHATSAPP</a>
@@ -42,6 +43,7 @@
 
 <div class="navbar">
     <a href="#home">Home</a>
+    <a href="#languages">Local Dialects</a>
     <a href="#audio-demo">Audio Samples</a>
     <a href="#packages">Pricing Plans</a>
     <a href="#payment">Secure Pay</a>
@@ -49,34 +51,41 @@
 
 <div class="container" id="home">
 
+    <section id="languages">
+        <h2>🌍 Local Bhasha - Hamari Asli Taqat</h2>
+        <p style="margin-bottom:15px; font-size:14px;">Humara Super Brain Bihar ki mitti ki bhasha ko samajhta hai. Chuniye apna accent:</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+            <span class="lang-badge">✅ BAJJIKA (Sitamarhi)</span>
+            <span class="lang-badge">✅ MAITHILI (Darbhanga)</span>
+            <span class="lang-badge">✅ BHOJPURI (Shahabad)</span>
+            <span class="lang-badge">✅ MAGHI (Magadh)</span>
+        </div>
+    </section>
+
     <section id="audio-demo">
         <h2>🎧 Election Audio Samples (All Posts)</h2>
-        <p style="margin-bottom: 20px;">Sunniye hamare AI dwara taiyaar kiye gaye har pad ke special gaane:</p>
         <div class="grid">
             <div class="card">
-                <span class="badge">MUKHIYA SPECIAL</span>
-                <h3>Mukhiya Song</h3>
-                <p style="color:gray; font-size:11px;">High Energy Mix</p>
+                <span class="badge">MUKHIYA - BHOJPURI</span>
+                <h3>Joshila Prachar</h3>
                 <audio controls style="width: 100%; margin: 10px 0;">
-                    <source src="audio/demo-mukhiya.mp3" type="audio/mpeg">
+                    <source src="audio/demo-bhojpuri.mp3" type="audio/mpeg">
                 </audio>
                 <p style="font-weight:bold; color:green;">Price: ₹499</p>
             </div>
             <div class="card">
-                <span class="badge">SARPANCH NYAY</span>
-                <h3>Sarpanch Voice-Over</h3>
-                <p style="color:gray; font-size:11px;">Trust & Justice Tone</p>
+                <span class="badge">SARPANCH - MAITHILI</span>
+                <h3>Nyay Geet</h3>
                 <audio controls style="width: 100%; margin: 10px 0;">
-                    <source src="audio/demo-sarpanch.mp3" type="audio/mpeg">
+                    <source src="audio/demo-maithili.mp3" type="audio/mpeg">
                 </audio>
                 <p style="font-weight:bold; color:green;">Price: ₹399</p>
             </div>
             <div class="card">
-                <span class="badge">WARD MEMBER</span>
-                <h3>Ward Sadasya Audio</h3>
-                <p style="color:gray; font-size:11px;">Simple & Catchy</p>
+                <span class="badge">WARD - BAJJIKA/MAGHI</span>
+                <h3>Local Helper Ad</h3>
                 <audio controls style="width: 100%; margin: 10px 0;">
-                    <source src="audio/demo-ward.mp3" type="audio/mpeg">
+                    <source src="audio/demo-local.mp3" type="audio/mpeg">
                 </audio>
                 <p style="font-weight:bold; color:green;">Price: ₹299</p>
             </div>
@@ -84,69 +93,69 @@
     </section>
 
     <section id="ai-power" style="background: linear-gradient(to right, #004a99, #0066cc); color: white; border: none;">
-        <h2 style="color: white; border-left-color: var(--gold);">🧠 Super AI Brain Intelligence</h2>
+        <h2 style="color: white; border-left-color: var(--gold);">🧠 Super AI Brain Production</h2>
         <div class="grid">
             <div style="padding: 10px;">
-                <p>✅ <b>Local Dialect Expert:</b> Bhojpuri, Maithili, aur Bajjika ka perfect touch.</p>
-                <p>✅ <b>Business Digitalization:</b> Reels, Posters, aur Audio Ads for any product.</p>
-                <p>✅ <b>Full Proof Content:</b> AI Video Making with pro-quality visual effects.</p>
+                <p>✅ <b>Hyper-Local Accent:</b> Bhojpuri, Maithili, Bajjika aur Maghi ka asali swaad.</p>
+                <p>✅ <b>Deepfake Video Ads:</b> Candidate ki photo ko AI se bolte hue reels mein badlein.</p>
+                <p>✅ <b>Business Reels:</b> Shops aur products ke liye viral-style video promotion.</p>
             </div>
             <div style="padding: 10px; border-left: 1px dashed #fff;">
-                <p>🚀 <b>Market Leadership:</b> 5 minute mein production, jo market se 10x fast hai.</p>
-                <p>🎬 <b>Video Reels:</b> Professional election reels for Facebook/Instagram viral growth.</p>
+                <p>🚀 <b>Instant Delivery:</b> 5-10 minute mein High-Quality content taiyaar.</p>
+                <p>📊 <b>Market Leader:</b> Bihar ka sabse sasta aur asardaar digital campaign hub.</p>
             </div>
         </div>
     </section>
 
     <section id="packages">
-        <h2>💰 Election Campaign Packages</h2>
+        <h2>💰 Campaign & Business Packages</h2>
         <table>
             <tr>
-                <th>Candidate Post</th>
-                <th>Service Material</th>
+                <th>Candidate/Business Type</th>
+                <th>Material Provided</th>
                 <th>Price</th>
             </tr>
             <tr>
-                <td><b>Ward Sadasya</b></td>
-                <td>AI Audio + Digital Poster</td>
+                <td><b>Ward Member / Small Shop</b></td>
+                <td>1 Local Audio + 1 HD Poster</td>
                 <td>₹299</td>
             </tr>
             <tr>
-                <td><b>Sarpanch Pad</b></td>
-                <td>Justice Tone Audio + 2 Posters</td>
+                <td><b>Sarpanch / Startup</b></td>
+                <td>Professional Voice-Over + 3 Posters</td>
                 <td>₹499</td>
             </tr>
             <tr>
-                <td><b>Mukhiya / Samiti</b></td>
-                <td>Power Song + AI Video Ad + 5 Posters</td>
+                <td><b>Mukhiya / Showroom</b></td>
+                <td>High-Energy Song + Cinematic Video Ad</td>
                 <td>₹999</td>
             </tr>
             <tr>
-                <td><b>Full Digital Hero</b></td>
-                <td>Unlimited Audio + Reels + WhatsApp Blast</td>
+                <td><b>Full Digital Mastery</b></td>
+                <td>Unlimited Content + Social Media Management</td>
                 <td>₹4,999</td>
             </tr>
         </table>
     </section>
 
     <section id="payment" style="text-align:center; background:#f0f7ff; border: 2px dashed #004a99;">
-        <h2>💳 Secure Payment Gateway</h2>
-        <p style="margin-bottom:20px;">Apna election ya business campaign book karein:</p>
+        <h2>💳 Start Your Digital Revolution</h2>
+        <p style="margin-bottom:20px;">Apna accent chunein aur campaign shuru karein:</p>
         
         <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
         <button id="rzp-button1" style="background-color: #27ae60; color: white; padding: 18px 45px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; font-size: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-            💳 PAY FOR CAMPAIGN NOW
+            💳 PAY & BOOK NOW
         </button>
 
         <script>
         var options = {
             "key": "rzp_test_RzNCtwgr2LMD2q", 
-            "amount": "29900", // Default lowest package
+            "amount": "29900", 
             "currency": "INR",
             "name": "Patna AI Studio Pro",
-            "description": "Election/Business Digital Service",
+            "description": "Super Brain AI Campaign Service",
             "handler": function (response){
-                alert("Payment Success! Transaction ID: " + response.razorpay_payment_id);
+                alert("Payment Success! ID: " + response.razorpay_payment_id);
             },
             "theme": { "color": "#004a99" }
         };
@@ -161,13 +170,13 @@
 
 <footer>
     <h3>PATNA AI STUDIO PRO</h3>
-    <p style="font-size: 13px; color: #666; margin-bottom: 15px;">A Unit of DigiTech-io Master Hub | Leading Digital Bihar</p>
+    <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Official AI Partner for Bihar Panchayat Elections | Patna & Sitamarhi</p>
     <div class="policy-links">
         <a href="privacy.html">Privacy Policy</a> | 
         <a href="terms.html">Terms & Conditions</a> | 
         <a href="refund.html">Refund Policy</a>
     </div>
-    <p style="margin-top: 15px; font-size: 11px; color: gray;">© 2026 Patna AI Studio Pro. Patna & Sitamarhi, Bihar.</p>
+    <p style="margin-top: 15px; font-size: 11px; color: gray;">© 2026 Patna AI Studio Pro. Powered by DigiTech-io.</p>
 </footer>
 
 </body>
