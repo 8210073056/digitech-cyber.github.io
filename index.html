@@ -28,7 +28,6 @@
         th{background:var(--primary);color:white;}
         footer{text-align:center;padding:40px 20px;background:#fff;border-top:2px solid var(--primary);margin-top:30px;}
         .policy-links a{color:var(--primary);text-decoration:none;margin:0 10px;font-weight:bold;font-size:12px;}
-        /* Admin Database Styles */
         #admin-db { background: #1a1a1b; color: #fff; padding: 25px; border-radius: 14px; margin-top: 30px; border: 2px solid var(--gold); }
         .db-search { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: none; font-size: 14px; outline: none; background: #fff; color: #000; }
         .db-btn { background: var(--success); color: white; padding: 6px 12px; border-radius: 5px; text-decoration: none; font-size: 12px; font-weight: bold; display: inline-block; }
@@ -57,7 +56,6 @@
 
     <section id="languages">
         <h2>🌍 Local Bhasha - Hamari Asli Taqat</h2>
-        <p style="margin-bottom:15px; font-size:14px;">Humara Super Brain Bihar ki mitti ki bhasha ko samajhta hai. Chuniye apna accent:</p>
         <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
             <span class="lang-badge">✅ BAJJIKA (Sitamarhi)</span>
             <span class="lang-badge">✅ MAITHILI (Darbhanga)</span>
@@ -66,129 +64,64 @@
         </div>
     </section>
 
-    <section id="audio-demo">
-        <h2>🎧 Election Audio Samples (All Posts)</h2>
-        <div class="grid">
-            <div class="card">
-                <span class="badge">MUKHIYA - BHOJPURI</span>
-                <h3>Joshila Prachar</h3>
-                <audio controls style="width: 100%; margin: 10px 0;">
-                    <source src="audio/demo-bhojpuri.mp3" type="audio/mpeg">
-                </audio>
-                <p style="font-weight:bold; color:green;">Price: ₹499</p>
-            </div>
-            <div class="card">
-                <span class="badge">SARPANCH - MAITHILI</span>
-                <h3>Nyay Geet</h3>
-                <audio controls style="width: 100%; margin: 10px 0;">
-                    <source src="audio/demo-maithili.mp3" type="audio/mpeg">
-                </audio>
-                <p style="font-weight:bold; color:green;">Price: ₹399</p>
-            </div>
-            <div class="card">
-                <span class="badge">WARD - BAJJIKA/MAGHI</span>
-                <h3>Local Helper Ad</h3>
-                <audio controls style="width: 100%; margin: 10px 0;">
-                    <source src="audio/demo-local.mp3" type="audio/mpeg">
-                </audio>
-                <p style="font-weight:bold; color:green;">Price: ₹299</p>
-            </div>
-        </div>
-    </section>
-
     <section id="admin-db">
-        <h2 style="color: var(--gold); border-left-color: var(--gold);">📊 Leader Database (Admin Panel)</h2>
-        <p style="font-size: 13px; color: #ccc; margin-bottom: 15px;">Smart AI Scraping: Bihar Panchayat Election Data Management</p>
-        
+        <h2 style="color: var(--gold); border-left-color: var(--gold);">📊 Active Leader Database (Sitamarhi Hub)</h2>
+        <p style="font-size: 13px; color: #ccc; margin-bottom: 15px;">Targeting Winners: Bihar Panchayat Election Real Data</p>
         <input type="text" id="dbSearch" class="db-search" placeholder="Type Name, District, Block or Panchayat to filter..." onkeyup="filterTable()">
-        
         <div style="overflow-x: auto;">
             <table id="leaderTable" style="background: #fff; color: #000;">
                 <thead>
                     <tr style="background: #333; color: var(--gold);">
                         <th>Name</th>
                         <th>Post</th>
-                        <th>District/Block</th>
-                        <th>Panchayat</th>
+                        <th>Block / Panchayat</th>
+                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
-                    <tr>
-                        <td>Ramsevak Prasad</td>
-                        <td>Mukhiya</td>
-                        <td>Sitamarhi / Punaura</td>
-                        <td>Punaura West</td>
-                        <td><a href="https://wa.me/91XXXXXXXXXX?text=Pranaam Mukhiya Ji Ramsevak Prasad, Patna AI Studio Pro laya hai aapke liye digital prachar..." class="db-btn">Send Demo</a></td>
-                    </tr>
-                    <tr>
-                        <td>Sushila Devi</td>
-                        <td>Sarpanch</td>
-                        <td>Patna / Bakhtiyarpur</td>
-                        <td>Karanj</td>
-                        <td><a href="https://wa.me/91XXXXXXXXXX?text=Pranaam Sarpanch Ji Sushila Devi..." class="db-btn">Send Demo</a></td>
-                    </tr>
-                    </tbody>
+                    <tr><td>Prema Devi</td><td>Mukhiya</td><td>Majorganj / Lohasi</td><td>Active</td><td><a href="https://wa.me/918210073056?text=Pranaam Mukhiya Ji Prema Devi, Patna AI Studio Pro laya hai Lohasi ke liye digital prachar..." class="db-btn">Send Demo</a></td></tr>
+                    <tr><td>Anuja Kumari</td><td>Mukhiya</td><td>Majorganj / Chandauli</td><td>Active</td><td><a href="https://wa.me/918210073056?text=Pranaam Mukhiya Ji Anuja Kumari..." class="db-btn">Send Demo</a></td></tr>
+                    <tr><td>Ravi Kumar</td><td>Mukhiya</td><td>Majorganj / Pachnaur</td><td>Active</td><td><a href="#" class="db-btn">Send Demo</a></td></tr>
+                    <tr><td>Naveen Kumar</td><td>Mukhiya</td><td>Rigga / Balua</td><td>Active</td><td><a href="#" class="db-btn">Send Demo</a></td></tr>
+                    <tr><td>Ravishankar Yadav</td><td>Mukhiya</td><td>Rigga / Bulandpur</td><td>Active</td><td><a href="#" class="db-btn">Send Demo</a></td></tr>
+                    <tr><td>Reema Devi</td><td>Mukhiya</td><td>Rigga / Mahesha Farakpur</td><td>Active</td><td><a href="#" class="db-btn">Send Demo</a></td></tr>
+                    <tr><td>Arun Kumar Chaudhary</td><td>Mukhiya</td><td>Sonbarsa / Singhwahini</td><td>Active</td><td><a href="#" class="db-btn">Send Demo</a></td></tr>
+                    <tr><td>Radha Devi</td><td>Mukhiya</td><td>Sonbarsa / Vishanpur Gonahi</td><td>Active</td><td><a href="#" class="db-btn">Send Demo</a></td></tr>
+                    <tr><td>Nitu Kumari Devi</td><td>Mukhiya</td><td>Sonbarsa / Sonbarsa</td><td>Active</td><td><a href="#" class="db-btn">Send Demo</a></td></tr>
+                    <tr><td>Madhurendra Kr Mishra</td><td>Mukhiya</td><td>Sonbarsa / Kachor</td><td>Active</td><td><a href="#" class="db-btn">Send Demo</a></td></tr>
+                </tbody>
             </table>
         </div>
     </section>
 
+    <section id="audio-demo">
+        <h2>🎧 Election Audio Samples</h2>
+        <div class="grid">
+            <div class="card"><span class="badge">MUKHIYA</span><h3>Joshila Prachar</h3><audio controls style="width: 100%; margin: 10px 0;"><source src="audio/demo-bhojpuri.mp3" type="audio/mpeg"></audio><p style="font-weight:bold; color:green;">₹499</p></div>
+            <div class="card"><span class="badge">SARPANCH</span><h3>Nyay Geet</h3><audio controls style="width: 100%; margin: 10px 0;"><source src="audio/demo-maithili.mp3" type="audio/mpeg"></audio><p style="font-weight:bold; color:green;">₹399</p></div>
+            <div class="card"><span class="badge">WARD MEMBER</span><h3>Local Helper</h3><audio controls style="width: 100%; margin: 10px 0;"><source src="audio/demo-local.mp3" type="audio/mpeg"></audio><p style="font-weight:bold; color:green;">₹299</p></div>
+        </div>
+    </section>
+
     <section id="packages">
-        <h2>💰 Campaign & Business Packages</h2>
+        <h2>💰 Campaign Packages</h2>
         <table>
-            <tr>
-                <th>Candidate/Business Type</th>
-                <th>Material Provided</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td><b>Ward Member / Small Shop</b></td>
-                <td>1 Local Audio + 1 HD Poster</td>
-                <td>₹299</td>
-            </tr>
-            <tr>
-                <td><b>Sarpanch / Startup</b></td>
-                <td>Professional Voice-Over + 3 Posters</td>
-                <td>₹499</td>
-            </tr>
-            <tr>
-                <td><b>Mukhiya / Showroom</b></td>
-                <td>High-Energy Song + Cinematic Video Ad</td>
-                <td>₹999</td>
-            </tr>
-            <tr>
-                <td><b>Full Digital Mastery</b></td>
-                <td>Unlimited Content + Social Media Management</td>
-                <td>₹4,999</td>
-            </tr>
+            <tr><th>Candidate Type</th><th>Service</th><th>Price</th></tr>
+            <tr><td><b>Ward Member</b></td><td>AI Audio + Digital Poster</td><td>₹299</td></tr>
+            <tr><td><b>Sarpanch</b></td><td>Professional Voice + 3 Posters</td><td>₹499</td></tr>
+            <tr><td><b>Mukhiya</b></td><td>High-Energy Song + Video Ad</td><td>₹999</td></tr>
         </table>
     </section>
 
     <section id="payment" style="text-align:center; background:#f0f7ff; border: 2px dashed #004a99;">
-        <h2>💳 Start Your Digital Revolution</h2>
-        <p style="margin-bottom:20px;">Apna accent chunein aur campaign shuru karein:</p>
-        
+        <h2>💳 Start Digital Campaign</h2>
         <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-        <button id="rzp-button1" style="background-color: #27ae60; color: white; padding: 18px 45px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; font-size: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-            💳 PAY & BOOK NOW
-        </button>
-
+        <button id="rzp-button1" style="background-color: #27ae60; color: white; padding: 18px 45px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; font-size: 18px;">💳 PAY & BOOK NOW</button>
         <script>
-        var options = {
-            "key": "rzp_test_RzNCtwgr2LMD2q", 
-            "amount": "29900", 
-            "currency": "INR",
-            "name": "Patna AI Studio Pro",
-            "description": "Super Brain AI Campaign Service",
-            "handler": function (response){
-                alert("Payment Success! ID: " + response.razorpay_payment_id);
-            },
-            "theme": { "color": "#004a99" }
-        };
+        var options = {"key": "rzp_test_RzNCtwgr2LMD2q","amount": "29900","currency": "INR","name": "Patna AI Studio Pro","handler": function (response){alert("Payment Success!");},"theme": {"color": "#004a99"}};
         var rzp1 = new Razorpay(options);
-        document.getElementById('rzp-button1').onclick = function(e){
-            rzp1.open(); e.preventDefault();
-        }
+        document.getElementById('rzp-button1').onclick = function(e){rzp1.open(); e.preventDefault();}
         </script>
     </section>
 
@@ -196,13 +129,7 @@
 
 <footer>
     <h3>PATNA AI STUDIO PRO</h3>
-    <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Official AI Partner for Bihar Panchayat Elections | Patna & Sitamarhi</p>
-    <div class="policy-links">
-        <a href="privacy.html">Privacy Policy</a> | 
-        <a href="terms.html">Terms & Conditions</a> | 
-        <a href="refund.html">Refund Policy</a>
-    </div>
-    <p style="margin-top: 15px; font-size: 11px; color: gray;">© 2026 Patna AI Studio Pro. Powered by DigiTech-io.</p>
+    <p style="font-size: 12px; color: gray;">© 2026 Patna AI Studio Pro. Official AI Partner for Bihar Elections.</p>
 </footer>
 
 <script>
@@ -212,18 +139,14 @@ function filterTable() {
     filter = input.value.toUpperCase();
     table = document.getElementById("leaderTable");
     tr = table.getElementsByTagName("tr");
-
-    // Loop through all table rows (except header)
     for (i = 1; i < tr.length; i++) {
-        tr[i].style.display = "none"; // Hide the row by default
+        tr[i].style.display = "none";
         td = tr[i].getElementsByTagName("td");
-        
-        // Loop through all columns of the current row
         for (j = 0; j < td.length; j++) {
             if (td[j]) {
                 txtValue = td[j].textContent || td[j].innerText;
                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = ""; // Show the row if a match is found
+                    tr[i].style.display = "";
                     break; 
                 }
             }
