@@ -13,142 +13,135 @@
         .tagline{font-size:13px;color:#666;margin-top:4px;}
         .action-group{margin-top:10px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;}
         .action-btn{color:#fff;border:none;padding:8px 14px;border-radius:25px;cursor:pointer;font-weight:bold;font-size:12px;display:flex;align-items:center;gap:6px;text-decoration:none;transition:.3s;}
-        .navbar{background:var(--primary);position:sticky;top:0;z-index:1000;display:flex;justify-content:center;flex-wrap:wrap;}
-        .navbar a{color:#fff;padding:12px 15px;text-decoration:none;font-weight:bold;font-size:13px;}
+        
+        /* Features Highlighting */
+        .feature-box { background: var(--dark); color: var(--gold); padding: 15px; border-radius: 10px; margin: 20px 0; text-align: center; border: 1px solid var(--gold); }
+        .feature-box b { text-transform: uppercase; font-size: 16px; color: #fff; display: block; margin-bottom: 5px; }
+
         .container{max-width:1150px;margin:20px auto;padding:0 12px;}
         section{background:#fff;margin-bottom:20px;padding:25px;border-radius:14px;box-shadow:0 5px 15px rgba(0,0,0,0.05);}
-        h2{font-size:22px;border-left:5px solid var(--primary);padding-left:10px;margin-bottom:15px;color:var(--primary);}
-        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-        .card{border:1px solid #eee;border-radius:12px;padding:20px;text-align:center;background:#fff;transition:.3s;}
-        .card:hover{transform:translateY(-5px);box-shadow:0 8px 15px rgba(0,0,0,0.1);}
-        .badge{display:inline-block;background:var(--gold);color:#000;padding:2px 8px;border-radius:5px;font-size:11px;font-weight:bold;margin-bottom:10px;}
-        .lang-badge{background:#eef2f3; color:var(--primary); padding:4px 12px; border-radius:15px; font-size:12px; font-weight:bold; border:1px solid var(--primary);}
-        table{width:100%;border-collapse:collapse;margin-top:15px;font-size:14px;}
-        th, td{padding:12px;border:1px solid #ddd;text-align:left;}
-        th{background:var(--primary);color:white;}
-        footer{text-align:center;padding:40px 20px;background:#fff;border-top:2px solid var(--primary);margin-top:30px;}
-        #admin-db { background: #1a1a1b; color: #fff; padding: 25px; border-radius: 14px; margin-top: 30px; border: 2px solid var(--gold); }
-        .db-search { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: none; font-size: 14px; outline: none; background: #fff; color: #000; }
-        .db-btn { background: var(--success); color: white; padding: 6px 12px; border-radius: 5px; text-decoration: none; font-size: 11px; font-weight: bold; display: inline-block; }
+        
+        /* Database Section */
+        #admin-db { background: var(--dark); color: #fff; padding: 25px; border-radius: 14px; border: 2px solid var(--gold); text-align: center; }
+        .db-search { width: 80%; padding: 15px; margin-top: 15px; border-radius: 30px; border: 2px solid var(--gold); font-size: 16px; outline: none; text-align: center; font-weight: bold; }
+        
+        #leaderTable { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; color: #000; border-radius: 10px; overflow: hidden; display: none; /* Initially Hidden */ }
+        th, td { padding: 15px; border: 1px solid #eee; text-align: left; }
+        th { background: var(--gold); color: #000; }
+        .db-btn { background: var(--success); color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-size: 13px; font-weight: bold; }
+        
+        .footer-tag { font-size: 12px; color: gray; margin-top: 20px; display: block; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo">PATNA AI STUDIO PRO</div>
-    <div class="tagline">Bihar's Super AI Brain: Multi-Dialect Professional Election Ads</div>
+    <div class="tagline"><b>BIHAR'S FIRST MULTI-DIALECT AI ELECTION HUB</b></div>
     <div class="action-group">
-        <a href="tel:+918210073056" class="action-btn" style="background:var(--call);">📞 CALL NOW</a>
-        <a href="https://wa.me/918210073056" class="action-btn" style="background:var(--success);">💬 WHATSAPP</a>
+        <a href="tel:+918210073056" class="action-btn" style="background:var(--call);">📞 CALL SUPPORT</a>
+        <a href="https://wa.me/918210073056" class="action-btn" style="background:var(--success);">💬 GET AI DEMO</a>
     </div>
 </header>
 
-<div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#languages">Local Dialects</a>
-    <a href="#admin-db">Runnisaidpur Hub (33)</a>
-    <a href="#packages">Pricing Plans</a>
-</div>
+<div class="container">
 
-<div class="container" id="home">
-
-    <section id="languages">
-        <h2>🌍 Local Bhasha - Hamari Asli Taqat</h2>
-        <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
-            <span class="lang-badge">✅ BAJJIKA (Runnisaidpur)</span>
-            <span class="lang-badge">✅ MAITHILI</span>
-            <span class="lang-badge">✅ BHOJPURI</span>
-            <span class="lang-badge">✅ MAGHI</span>
-        </div>
-    </section>
+    <div class="feature-box">
+        <b>🚀 PLATFORM CORE FEATURES</b>
+        <p>✅ <b>BAJJIKA & BHOJPURI AI VOICE</b> | ✅ <b>PERSONALIZED NAME CALLING</b> | ✅ <b>24/7 BULK WHATSAPP ADVERTISING</b></p>
+    </div>
 
     <section id="admin-db">
-        <h2 style="color: var(--gold); border-left-color: var(--gold);">📊 Runnisaidpur Block Master Database (33 Mukhiya)</h2>
-        <p style="font-size: 13px; color: #ccc; margin-bottom: 15px;">Targeting All 33 Panchayats of Runnisaidpur, Sitamarhi</p>
-        <input type="text" id="dbSearch" class="db-search" placeholder="Type Panchayat or Mukhiya Name..." onkeyup="filterTable()">
+        <h2 style="color: var(--gold);">🔍 SEARCH MUKHIYA DATABASE</h2>
+        <p style="color: #ccc;">Enter <b>Panchayat Name</b> to find the Winner Leader & Send Demo</p>
+        <input type="text" id="dbSearch" class="db-search" placeholder="Enter Panchayat Name (e.g. Athri, Thumma)..." onkeyup="filterTable()">
+        
         <div style="overflow-x: auto;">
-            <table id="leaderTable" style="background: #fff; color: #000;">
+            <table id="leaderTable">
                 <thead>
-                    <tr style="background: #333; color: var(--gold);">
+                    <tr>
                         <th>Panchayat</th>
                         <th>Mukhiya Name</th>
-                        <th>Mobile Number</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
-                    <tr><td>अथरी</td><td>आलोक कुमार</td><td>9934279093</td><td><a href="https://wa.me/919934279093?text=Pranaam Mukhiya Ji Alok Kumar, Patna AI Studio laya hai Athri ke liye Bajjika AI prachar..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>ओलीपुर सरहचिया</td><td>प्रमोद आनन्द</td><td>9576359734</td><td><a href="https://wa.me/919576359734?text=Pranaam Mukhiya Ji Pramod Anand..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>कौडिया लालपुर</td><td>अबधेश साह</td><td>9801878799</td><td><a href="https://wa.me/919801878799?text=Pranaam Mukhiya Ji Abadhesh Sah..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>गंगवारा बुजुर्ग</td><td>सजी अहमद</td><td>9939115126</td><td><a href="https://wa.me/919939115126?text=Pranaam Mukhiya Ji Saji Ahmed..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>गुरुदह उर्फ गौसनगर</td><td>आशा देवी</td><td>9939717998</td><td><a href="https://wa.me/919939717998?text=Pranaam Mukhiya Ji Asha Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>गिधा फुलवरिया</td><td>श्रवण साह</td><td>8210339904</td><td><a href="https://wa.me/918210339904?text=Pranaam Mukhiya Ji Shravan Sah..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>टिकौली</td><td>निलम देवी</td><td>8877455944</td><td><a href="https://wa.me/918877455944?text=Pranaam Mukhiya Ji Nilam Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>तिलकताजपुर</td><td>मधुलिका देवी</td><td>7050302306</td><td><a href="https://wa.me/917050302306?text=Pranaam Mukhiya Ji Madhulika Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>थुम्मा</td><td>रीना देवी</td><td>9708838142</td><td><a href="https://wa.me/919708838142?text=Pranaam Mukhiya Ji Reena Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>देवना बुजुर्ग</td><td>माधुरी देवी</td><td>8789229959</td><td><a href="https://wa.me/918789229959?text=Pranaam Mukhiya Ji Madhuri Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>धनुषी</td><td>दिलीप कुमार पासवान</td><td>9576448601</td><td><a href="https://wa.me/919576448601?text=Pranaam Mukhiya Ji Dilip Kumar..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>प्रेमनगर</td><td>धर्मेन्द्र कमती</td><td>834394724</td><td><a href="https://wa.me/91834394724?text=Pranaam Mukhiya Ji Dharmendra Kamti..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>बगाही रामनगर</td><td>रेणु देवी</td><td>9973259063</td><td><a href="https://wa.me/919973259063?text=Pranaam Mukhiya Ji Renu Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>बघाड़ी</td><td>रानी देवी</td><td>8084852630</td><td><a href="https://wa.me/918084852630?text=Pranaam Mukhiya Ji Rani Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>बरहेत्ता</td><td>प्रमिला देवी</td><td>9631540736</td><td><a href="https://wa.me/919631540736?text=Pranaam Mukhiya Ji Pramila Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>बलुआ</td><td>नवीन कुमार</td><td>8789109853</td><td><a href="https://wa.me/918789109853?text=Pranaam Mukhiya Ji Naveen Kumar..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>बुलन्दपुर</td><td>रविशंकर यादव</td><td>9931669238</td><td><a href="https://wa.me/919931669238?text=Pranaam Mukhiya Ji Ravi Shankar Yadav..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>बेलाही नीलकंठ</td><td>संजू देवी</td><td>7482832733</td><td><a href="https://wa.me/917482832733?text=Pranaam Mukhiya Ji Sanju Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>मधौल खानी</td><td>अनिता देवी</td><td>9572551531</td><td><a href="https://wa.me/919572551531?text=Pranaam Mukhiya Ji Anita Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>महेशा फरकपुर</td><td>टीमा देवी</td><td>8969054602</td><td><a href="https://wa.me/918969054602?text=Pranaam Mukhiya Ji Teema Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>महिन्दवारा</td><td>पूनम देवी</td><td>8507636404</td><td><a href="https://wa.me/918507636404?text=Pranaam Mukhiya Ji Poonam Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>महिसार</td><td>राम लखन राय</td><td>9708984611</td><td><a href="https://wa.me/919708984611?text=Pranaam Mukhiya Ji Ram Lakhan Rai..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>मोरसंड</td><td>कामनी सिंह</td><td>9771683366</td><td><a href="https://wa.me/919771683366?text=Pranaam Mukhiya Ji Kamini Singh..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>मानिक चौक उत्तरी</td><td>अनुराधा कुमारी</td><td>9708053007</td><td><a href="https://wa.me/919708053007?text=Pranaam Mukhiya Ji Anuradha Kumari..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>मानिक चौक दक्षिणी</td><td>राम नारायण साह</td><td>9576681301</td><td><a href="https://wa.me/919576681301?text=Pranaam Mukhiya Ji Ram Narayan Sah..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>मानिक चौक पश्चिमी</td><td>एकनाथ झा</td><td>7903795502</td><td><a href="https://wa.me/917903795502?text=Pranaam Mukhiya Ji Eknath Jha..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>रुन्नीसैदपुर उत्तरी</td><td>सगेयान देवी</td><td>9525571234</td><td><a href="https://wa.me/919525571234?text=Pranaam Mukhiya Ji Sageyan Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>रुन्नीसैदपुर मध्य</td><td>प्रमिला देवी</td><td>7091942730</td><td><a href="https://wa.me/917091942730?text=Pranaam Mukhiya Ji Pramila Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>रुन्नीसैदपुर दक्षिणी</td><td>राम प्रीत राय</td><td>9931089201</td><td><a href="https://wa.me/919931089201?text=Pranaam Mukhiya Ji Ram Prit Rai..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>रुन्नीसैदपुर पश्चिमी</td><td>विनय कुमार</td><td>9934279589</td><td><a href="https://wa.me/919934279589?text=Pranaam Mukhiya Ji Vinay Kumar..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>सिरखिरिया</td><td>मुकेश बैठा</td><td>9631925281</td><td><a href="https://wa.me/919631925281?text=Pranaam Mukhiya Ji Mukesh Baitha..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>टैन विशुनी</td><td>किरण देवी</td><td>9934659459</td><td><a href="https://wa.me/919934659459?text=Pranaam Mukhiya Ji Kiran Devi..." class="db-btn">Send Demo</a></td></tr>
-                    <tr><td>बहेरा</td><td>शशि भूषण सिंह</td><td>9934415250</td><td><a href="https://wa.me/919934415250?text=Pranaam Mukhiya Ji Shashi Bhushan Singh..." class="db-btn">Send Demo</a></td></tr>
+                    <tr><td>अथरी</td><td>आलोक कुमार</td><td><a href="https://wa.me/919934279093?text=Pranaam Mukhiya Ji Alok Kumar, Patna AI Studio Pro laya hai Athri ke liye Bajjika AI prachar..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>ओलीपुर सरहचिया</td><td>प्रमोद आनन्द</td><td><a href="https://wa.me/919576359734?text=Pranaam Mukhiya Ji Pramod Anand..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>कौडिया लालपुर</td><td>अबधेश साह</td><td><a href="https://wa.me/919801878799?text=Pranaam Mukhiya Ji Abadhesh Sah..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>गंगवारा बुजुर्ग</td><td>सजी अहमद</td><td><a href="https://wa.me/919939115126?text=Pranaam Mukhiya Ji Saji Ahmed..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>गुरुदह उर्फ गौसनगर</td><td>आशा देवी</td><td><a href="https://wa.me/919939717998?text=Pranaam Mukhiya Ji Asha Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>गिधा फुलवरिया</td><td>श्रवण साह</td><td><a href="https://wa.me/918210339904?text=Pranaam Mukhiya Ji Shravan Sah..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>टिकौली</td><td>निलम देवी</td><td><a href="https://wa.me/918877455944?text=Pranaam Mukhiya Ji Nilam Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>तिलकताजपुर</td><td>मधुलिका देवी</td><td><a href="https://wa.me/917050302306?text=Pranaam Mukhiya Ji Madhulika Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>थुम्मा</td><td>रीना देवी</td><td><a href="https://wa.me/919708838142?text=Pranaam Mukhiya Ji Reena Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>देवना बुजुर्ग</td><td>माधुरी देवी</td><td><a href="https://wa.me/918789229959?text=Pranaam Mukhiya Ji Madhuri Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>धनुषी</td><td>दिलीप कुमार पासवान</td><td><a href="https://wa.me/919576448601?text=Pranaam Mukhiya Ji Dilip Kumar..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>प्रेमनगर</td><td>धर्मेन्द्र कमती</td><td><a href="https://wa.me/91834394724?text=Pranaam Mukhiya Ji Dharmendra Kamti..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>बगाही रामनगर</td><td>रेणु देवी</td><td><a href="https://wa.me/919973259063?text=Pranaam Mukhiya Ji Renu Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>बघाड़ी</td><td>रानी देवी</td><td><a href="https://wa.me/918084852630?text=Pranaam Mukhiya Ji Rani Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>बरहेत्ता</td><td>प्रमिला देवी</td><td><a href="https://wa.me/919631540736?text=Pranaam Mukhiya Ji Pramila Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>बलुआ</td><td>नवीन कुमार</td><td><a href="https://wa.me/918789109853?text=Pranaam Mukhiya Ji Naveen Kumar..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>बुलन्दपुर</td><td>रविशंकर यादव</td><td><a href="https://wa.me/919931669238?text=Pranaam Mukhiya Ji Ravi Shankar Yadav..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>बेलाही नीलकंठ</td><td>संजू देवी</td><td><a href="https://wa.me/917482832733?text=Pranaam Mukhiya Ji Sanju Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>मधौल खानी</td><td>अनिता देवी</td><td><a href="https://wa.me/919572551531?text=Pranaam Mukhiya Ji Anita Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>महेशा फरकपुर</td><td>टीमा देवी</td><td><a href="https://wa.me/918969054602?text=Pranaam Mukhiya Ji Teema Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>महिन्दवारा</td><td>पूनम देवी</td><td><a href="https://wa.me/918507636404?text=Pranaam Mukhiya Ji Poonam Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>महिसार</td><td>राम लखन राय</td><td><a href="https://wa.me/919708984611?text=Pranaam Mukhiya Ji Ram Lakhan Rai..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>मोरसंड</td><td>कामनी सिंह</td><td><a href="https://wa.me/919771683366?text=Pranaam Mukhiya Ji Kamini Singh..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>मानिक चौक उत्तरी</td><td>अनुराधा कुमारी</td><td><a href="https://wa.me/919708053007?text=Pranaam Mukhiya Ji Anuradha Kumari..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>मानिक चौक दक्षिणी</td><td>राम नारायण साह</td><td><a href="https://wa.me/919576681301?text=Pranaam Mukhiya Ji Ram Narayan Sah..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>मानिक चौक पश्चिमी</td><td>एकनाथ झा</td><td><a href="https://wa.me/917903795502?text=Pranaam Mukhiya Ji Eknath Jha..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>रुन्नीसैदपुर उत्तरी</td><td>सगेयान देवी</td><td><a href="https://wa.me/919525571234?text=Pranaam Mukhiya Ji Sageyan Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>रुन्नीसैदपुर मध्य</td><td>प्रमिला देवी</td><td><a href="https://wa.me/917091942730?text=Pranaam Mukhiya Ji Pramila Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>रुन्नीसैदपुर दक्षिणी</td><td>राम प्रीत राय</td><td><a href="https://wa.me/919931089201?text=Pranaam Mukhiya Ji Ram Prit Rai..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>रुन्नीसैदपुर पश्चिमी</td><td>विनय कुमार</td><td><a href="https://wa.me/919934279589?text=Pranaam Mukhiya Ji Vinay Kumar..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>सिरखिरिया</td><td>मुकेश बैठा</td><td><a href="https://wa.me/919631925281?text=Pranaam Mukhiya Ji Mukesh Baitha..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>टैन विशुनी</td><td>किरण देवी</td><td><a href="https://wa.me/919934659459?text=Pranaam Mukhiya Ji Kiran Devi..." class="db-btn">Send Pranaam Audio</a></td></tr>
+                    <tr><td>बहेरा</td><td>शशि भूषण सिंह</td><td><a href="https://wa.me/919934415250?text=Pranaam Mukhiya Ji Shashi Bhushan Singh..." class="db-btn">Send Pranaam Audio</a></td></tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-    <section id="packages">
-        <h2>💰 Campaign Packages</h2>
-        <table>
-            <tr><th>Candidate Type</th><th>Service</th><th>Price</th></tr>
-            <tr><td><b>Mukhiya</b></td><td>High-Energy Bajjika Song + Video Ad</td><td>₹999</td></tr>
-            <tr><td><b>Sarpanch</b></td><td>Professional Voice + 3 Posters</td><td>₹499</td></tr>
-            <tr><td><b>Ward Member</b></td><td>AI Audio + Digital Poster</td><td>₹299</td></tr>
-        </table>
+    <section id="audio-demo">
+        <h2>🎧 AI AUDIO AD SAMPLES</h2>
+        <div class="grid">
+            <div class="card"><h3>Joshila Bajjika Ad</h3><audio controls style="width: 100%;"><source src="audio/bajjika.mp3" type="audio/mpeg"></audio></div>
+            <div class="card"><h3>Powerful Bhojpuri Ad</h3><audio controls style="width: 100%;"><source src="audio/bhojpuri.mp3" type="audio/mpeg"></audio></div>
+        </div>
     </section>
 
 </div>
 
-<footer>
-    <h3>PATNA AI STUDIO PRO</h3>
-    <p style="font-size: 12px; color: gray;">© 2026 Patna AI Studio Pro. Official AI Partner for Runnisaidpur Elections.</p>
+<footer style="text-align:center; padding:20px;">
+    <b>PATNA AI STUDIO PRO</b><br>
+    <span class="footer-tag">Official AI Election Partner 2026 | Runnisaidpur Hub</span>
 </footer>
 
 <script>
 function filterTable() {
-    var input, filter, table, tr, td, i, j, txtValue;
+    var input, filter, table, tr, td, i, txtValue, found = false;
     input = document.getElementById("dbSearch");
     filter = input.value.toUpperCase();
     table = document.getElementById("leaderTable");
     tr = table.getElementsByTagName("tr");
+
+    if (filter.length > 0) {
+        table.style.display = "table"; // Show table only when typing
+    } else {
+        table.style.display = "none"; // Hide table if empty
+    }
+
     for (i = 1; i < tr.length; i++) {
-        tr[i].style.display = "none";
-        td = tr[i].getElementsByTagName("td");
-        for (j = 0; j < td.length; j++) {
-            if (td[j]) {
-                txtValue = td[j].textContent || td[j].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                    break; 
-                }
+        td = tr[i].getElementsByTagName("td")[0]; // Filter by Panchayat Name
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+                found = true;
+            } else {
+                tr[i].style.display = "none";
             }
         }
     }
