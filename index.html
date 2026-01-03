@@ -30,7 +30,7 @@
         .policy-links a{color:var(--primary);text-decoration:none;margin:0 10px;font-weight:bold;font-size:12px;}
         /* Admin Database Styles */
         #admin-db { background: #1a1a1b; color: #fff; padding: 25px; border-radius: 14px; margin-top: 30px; border: 2px solid var(--gold); }
-        .db-search { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: none; font-size: 14px; }
+        .db-search { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: none; font-size: 14px; outline: none; background: #fff; color: #000; }
         .db-btn { background: var(--success); color: white; padding: 6px 12px; border-radius: 5px; text-decoration: none; font-size: 12px; font-weight: bold; display: inline-block; }
     </style>
 </head>
@@ -100,31 +100,35 @@
         <h2 style="color: var(--gold); border-left-color: var(--gold);">📊 Leader Database (Admin Panel)</h2>
         <p style="font-size: 13px; color: #ccc; margin-bottom: 15px;">Smart AI Scraping: Bihar Panchayat Election Data Management</p>
         
-        <input type="text" class="db-search" placeholder="Search by Name, District or Panchayat...">
+        <input type="text" id="dbSearch" class="db-search" placeholder="Type Name, District, Block or Panchayat to filter..." onkeyup="filterTable()">
         
         <div style="overflow-x: auto;">
-            <table style="background: #fff; color: #000;">
-                <tr style="background: #333; color: var(--gold);">
-                    <th>Name</th>
-                    <th>Post</th>
-                    <th>District/Block</th>
-                    <th>Panchayat</th>
-                    <th>Action</th>
-                </tr>
-                <tr>
-                    <td>Ramsevak Prasad</td>
-                    <td>Mukhiya</td>
-                    <td>Sitamarhi / Punaura</td>
-                    <td>Punaura West</td>
-                    <td><a href="https://wa.me/91XXXXXXXXXX?text=Pranaam Mukhiya Ji Ramsevak Prasad, Patna AI Studio Pro laya hai aapke liye digital prachar..." class="db-btn">Send Demo</a></td>
-                </tr>
-                <tr>
-                    <td>Sushila Devi</td>
-                    <td>Sarpanch</td>
-                    <td>Patna / Bakhtiyarpur</td>
-                    <td>Karanj</td>
-                    <td><a href="#" class="db-btn">Send Demo</a></td>
-                </tr>
+            <table id="leaderTable" style="background: #fff; color: #000;">
+                <thead>
+                    <tr style="background: #333; color: var(--gold);">
+                        <th>Name</th>
+                        <th>Post</th>
+                        <th>District/Block</th>
+                        <th>Panchayat</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td>Ramsevak Prasad</td>
+                        <td>Mukhiya</td>
+                        <td>Sitamarhi / Punaura</td>
+                        <td>Punaura West</td>
+                        <td><a href="https://wa.me/91XXXXXXXXXX?text=Pranaam Mukhiya Ji Ramsevak Prasad, Patna AI Studio Pro laya hai aapke liye digital prachar..." class="db-btn">Send Demo</a></td>
+                    </tr>
+                    <tr>
+                        <td>Sushila Devi</td>
+                        <td>Sarpanch</td>
+                        <td>Patna / Bakhtiyarpur</td>
+                        <td>Karanj</td>
+                        <td><a href="https://wa.me/91XXXXXXXXXX?text=Pranaam Sarpanch Ji Sushila Devi..." class="db-btn">Send Demo</a></td>
+                    </tr>
+                    </tbody>
             </table>
         </div>
     </section>
@@ -200,6 +204,33 @@
     </div>
     <p style="margin-top: 15px; font-size: 11px; color: gray;">© 2026 Patna AI Studio Pro. Powered by DigiTech-io.</p>
 </footer>
+
+<script>
+function filterTable() {
+    var input, filter, table, tr, td, i, j, txtValue;
+    input = document.getElementById("dbSearch");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("leaderTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows (except header)
+    for (i = 1; i < tr.length; i++) {
+        tr[i].style.display = "none"; // Hide the row by default
+        td = tr[i].getElementsByTagName("td");
+        
+        // Loop through all columns of the current row
+        for (j = 0; j < td.length; j++) {
+            if (td[j]) {
+                txtValue = td[j].textContent || td[j].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = ""; // Show the row if a match is found
+                    break; 
+                }
+            }
+        }
+    }
+}
+</script>
 
 </body>
 </html>
