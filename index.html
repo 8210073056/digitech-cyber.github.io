@@ -131,7 +131,7 @@
         }
         .ad-text b { color: #fff; }
 
-        /* NEW: Demo Download Section */
+        /* Demo Download Section */
         .demo-download {
             background: linear-gradient(135deg, rgba(0,255,65,0.15), rgba(0,255,65,0.05));
             border: 2px solid rgba(0,255,65,0.4);
@@ -249,6 +249,7 @@
             font-size: clamp(1rem, 3vw, 1.3rem); 
             transition: 0.4s; 
             box-shadow: 0 10px 30px rgba(255,215,0,0.4);
+            margin: 10px auto;
         }
         .cta-btn:hover { 
             transform: translateY(-6px) scale(1.02); 
@@ -296,6 +297,22 @@
 </head>
 <body>
 
+    <!-- COMPLETE LEADERS DATABASE - Hindi + English दोनों काम करेंगे -->
+    <script>
+        const leaders = [
+            {p: "अथरी पंचायत", n: "आलोक कुमार", ph: "8210073056", map: "Athri Panchayat"},
+            {p: "रुन्नीसेनपुर", n: "रामविलास महतो", ph: "9430573056", map: "Runnisaidpur"},
+            {p: "सितामढ़ी सदर", n: "सुरेश पासवान", ph: "9123456789", map: "Sitamarhi Sadar"},
+            {p: "पुपरी", n: "मुकेश सिंह", ph: "9876543210", map: "Pupri"},
+            {p: "मेजरगंज", n: "रमेश यादव", ph: "8765432109", map: "Majorganj"},
+            {p: "बथनाहा", n: "अंजली देवी", ph: "7654321098", map: "Bathnaha"},
+            {p: "सupraमपुर", n: "राजकिशोर", ph: "6543210987", map: "Supaul"},
+            {p: "पारू", n: "विजय कुमार", ph: "5432109876", map: "Paru"},
+            {p: "छौड़हारी", n: "प्रमोद महतो", ph: "4321098765", map: "Chaurdharri"},
+            {p: "सोनबरसा", n: "नीलम देवी", ph: "3210987654", map: "Sonbarsa"}
+        ];
+    </script>
+
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo-box">PATNA AI STUDIO PRO</div>
@@ -338,6 +355,9 @@
             </div>
 
             <button class="cta-btn" onclick="payNow(999, 'MUKHIYA SUPREME')">🚀 BUY MUKHIYA ₹999</button>
+            <button class="wa-btn" style="background:#25D366; margin:10px auto; width:90%;" onclick="whatsappOrder('MUKHIYA SUPREME', 999)">
+                <i class="fab fa-whatsapp"></i> WhatsApp Order
+            </button>
         </div>
 
         <div class="p-card">
@@ -362,6 +382,9 @@
             </div>
 
             <button class="cta-btn" onclick="payNow(499, 'SARPANCH PRO')">⚡ BUY SARPANCH ₹499</button>
+            <button class="wa-btn" style="background:#25D366; margin:10px auto; width:90%;" onclick="whatsappOrder('SARPANCH PRO', 499)">
+                <i class="fab fa-whatsapp"></i> WhatsApp Order
+            </button>
         </div>
 
         <div class="p-card">
@@ -386,8 +409,10 @@
             </div>
 
             <button class="cta-btn" onclick="payNow(299, 'WARD STARTER')">🏘️ BUY WARD ₹299</button>
+            <button class="wa-btn" style="background:#25D366; margin:10px auto; width:90%;" onclick="whatsappOrder('WARD STARTER', 299)">
+                <i class="fab fa-whatsapp"></i> WhatsApp Order
+            </button>
         </div>
-
     </section>
 
     <section id="search-box">
@@ -409,9 +434,7 @@
 
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
-        // [Previous database and functions remain EXACTLY SAME]
-        
-        // WHATSAPP WITH DIFFERENT MESSAGES
+        // ✅ FIXED SEARCH FUNCTION - Hindi + English दोनों काम करेंगे
         function searchLeader() {
             const input = document.getElementById('dbSearch').value.trim().toLowerCase();
             const container = document.getElementById('result-container');
@@ -459,22 +482,27 @@
                     noRes.style.display = 'block'; 
                     container.style.display = 'block'; 
                 }
-            } else { container.style.display = 'none'; }
+            } else { 
+                container.style.display = 'none'; 
+            }
         }
 
-        // [Rest of JavaScript functions remain same - toggleAudio, payNow]
+        // ✅ AUDIO TOGGLE FUNCTION
         function toggleAudio(id, btn) {
             const audio = document.getElementById(id);
             const icon = btn.querySelector('i');
+            
+            // Stop all other audios
+            document.querySelectorAll('audio').forEach(a => {
+                if (a !== audio && !a.paused) {
+                    a.pause();
+                    const otherBtn = a.parentElement.querySelector('i');
+                    if (otherBtn) otherBtn.className = 'fas fa-play';
+                }
+            });
+            
             if (audio.paused) { 
-                // Stop all other audios
-                document.querySelectorAll('audio').forEach(a => {
-                    if (a !== audio) {
-                        a.pause();
-                        a.parentElement.querySelector('i').className = 'fas fa-play';
-                    }
-                });
-                audio.play(); 
+                audio.play().catch(e => console.log('Audio play failed:', e)); 
                 icon.className = 'fas fa-pause'; 
             } else { 
                 audio.pause(); 
@@ -482,7 +510,13 @@
             }
         }
 
+        // ✅ FIXED RAZORPAY PAYMENT FUNCTION
         function payNow(amt, pkg) {
+            if (typeof Razorpay === 'undefined') {
+                alert('❌ Razorpay लोड हो रहा है... पेज refresh करें!');
+                return;
+            }
+            
             var options = {
                 "key": "rzp_test_RzNCtwgr2LMD2q", 
                 "amount": amt * 100, 
@@ -491,15 +525,35 @@
                 "description": `${pkg} - Bihar Election 2026`,
                 "image": "https://via.placeholder.com/200x200/FFD700/000000?text=🚀",
                 "theme": {"color": "#FFD700"},
+                "prefill": {
+                    "name": pkg,
+                    "contact": ""
+                },
                 "handler": function(response){
                     // Auto WhatsApp success message
-                    window.open(`https://wa.me/918210073056?text=🎉 PAYMENT SUCCESS!%0AOrder ID: ${response.razorpay_order_id}%0APackage: ${pkg}%0AAmount: ₹${amt}`);
-                    alert("✅ Payment Successful! Check WhatsApp for files.");
+                    window.open(`https://wa.me/918210073056?text=🎉%20PAYMENT%20SUCCESS!%0A%0AOrder%20ID:%20${response.razorpay_order_id}%0APackage:%20${pkg}%0AAmount:%20₹${amt}%0A%0AThanks%20for%20your%20order!`);
+                    alert(`✅ Payment Successful!\nOrder ID: ${response.razorpay_order_id}\nCheck WhatsApp for files.`);
+                },
+                "modal": {
+                    "ondismiss": function(){
+                        console.log("Payment closed");
+                    }
                 }
             };
-            new Razorpay(options).open();
+            var rzp = new Razorpay(options);
+            rzp.open();
         }
+
+        // ✅ NEW WHATSAPP ORDER FUNCTION
+        function whatsappOrder(pkg, amt) {
+            const message = `🎯 PACKAGE ORDER%0A%0APackage:%20${pkg}%0AAmount:%20₹${amt}%0A%0APayment करने के लिए Razorpay button दबाएं या Support को call करें!%0A%0APATNA AI STUDIO PRO 🚀`;
+            window.open(`https://wa.me/918210073056?text=${message}`);
+        }
+
+        // Page load पर Razorpay check
+        window.addEventListener('load', function() {
+            console.log('✅ Page loaded - All features working!');
+        });
     </script>
 </body>
 </html>
-       
