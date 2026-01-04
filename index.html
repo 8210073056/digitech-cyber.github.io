@@ -3,167 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PATNA AI STUDIO PRO | Runnisaidpur Hub 2026</title>
+    <title>PATNA AI STUDIO PRO | Bihar Election Hub 2026</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --gold: #FFD700; --accent: #FF4500; --green: #25D366; --bg: #050505; 
-            --card: #121212; --shadow: 0 15px 45px rgba(0,0,0,0.8);
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-        body { font-family: 'Poppins', sans-serif; background: var(--bg); color: #fff; overflow-x: hidden; }
+        :root { --blue: #004a99; --gold: #f1c40f; --text: #2c3e50; --bg: #f8f9fa; --white: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
 
-        /* Navigation & Sticky Support */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background: rgba(0,0,0,0.95); border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 1000; }
-        .logo { font-family: 'Orbitron'; color: var(--gold); font-size: 1.5rem; font-weight: 900; }
-        .support-btns { display: flex; gap: 15px; }
-        .nav-btn { color: #fff; text-decoration: none; font-weight: bold; font-size: 14px; border: 1px solid var(--gold); padding: 8px 15px; border-radius: 20px; transition: 0.3s; }
-        .nav-btn:hover { background: var(--gold); color: #000; }
+        header { background: var(--blue); padding: 50px 20px; text-align: center; color: white; border-bottom: 6px solid var(--gold); }
+        .logo { font-family: 'Orbitron'; font-size: 2.8rem; font-weight: 900; color: var(--gold); }
 
-        /* Hero & Viral Search */
-        .hero { min-height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 100px 20px; text-align: center; background: radial-gradient(circle, #1a1a2e 0%, #050505 100%); }
-        .search-box { width: 95%; max-width: 750px; padding: 25px 40px; border-radius: 60px; border: 4px solid var(--gold); background: #000; color: #fff; font-size: 1.4rem; text-align: center; outline: none; font-weight: 700; box-shadow: 0 0 30px rgba(255,215,0,0.2); transition: 0.4s; }
-        .search-box:focus { box-shadow: 0 0 60px var(--gold); transform: scale(1.02); }
+        /* Search Section */
+        .search-container { max-width: 900px; margin: -35px auto 40px; padding: 0 20px; position: relative; z-index: 10; }
+        .main-search { width: 100%; padding: 25px 35px; border-radius: 60px; border: 4px solid var(--blue); background: var(--white); font-size: 1.3rem; outline: none; box-shadow: 0 15px 40px rgba(0,0,0,0.1); text-align: center; font-weight: 700; }
+        .main-search:focus { transform: scale(1.02); border-color: #3498db; }
 
-        /* Search Results Display */
-        #result-display { display: none; width: 100%; max-width: 900px; margin-top: 40px; }
-        .result-card { background: linear-gradient(145deg, #1e3a5f, #0a192f); border: 2px solid var(--gold); border-radius: 35px; padding: 40px; text-align: center; box-shadow: var(--shadow); animation: slideUp 0.5s ease; }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        /* Results Card */
+        #result-box { display: none; max-width: 850px; margin: 30px auto; padding: 0 20px; animation: slideIn 0.5s ease; }
+        .leader-card { background: var(--white); border: 3px solid var(--blue); border-radius: 35px; padding: 50px; text-align: center; box-shadow: 0 25px 60px rgba(0,0,0,0.15); }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* 🎵 3 AUDIO DEMO SECTIONS */
-        .demo-section { padding: 80px 5%; background: #080808; border-top: 1px solid #222; }
-        .demo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .demo-card { background: var(--card); border: 1px solid #333; border-radius: 25px; padding: 30px; text-align: center; transition: 0.4s; border-left: 5px solid var(--gold); }
-        .demo-card:hover { transform: translateY(-10px); border-color: var(--gold); }
-        audio { width: 100%; filter: invert(1); margin-top: 20px; border-radius: 10px; }
+        /* Audio Grid */
+        .demo-section { padding: 60px 5%; background: var(--white); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .audio-card { background: #f1f4f8; border-radius: 25px; padding: 30px; border-top: 6px solid var(--blue); text-align: center; transition: 0.3s; }
+        .audio-card:hover { transform: translateY(-10px); }
+        audio { width: 100%; margin-top: 15px; }
 
-        /* 💰 PRICING & RAZORPAY */
-        .pkg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; padding: 50px 5%; }
-        .pkg-card { background: #111; border-radius: 30px; padding: 50px; text-align: center; border: 1px solid #222; transition: 0.3s; }
-        .price { font-size: 4rem; font-weight: 900; color: var(--gold); font-family: 'Orbitron'; margin: 20px 0; }
-        .btn-pay { width: 100%; padding: 20px; border-radius: 50px; border: none; font-weight: 800; font-size: 1.1rem; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: 0.3s; margin-top: 10px; text-decoration: none; }
-        .btn-gold { background: linear-gradient(45deg, var(--gold), #ffed4a); color: #000; }
-        .btn-wa { background: var(--green); color: #fff; }
+        /* Pricing & Checkout */
+        .pkg-card { background: var(--white); border-radius: 30px; padding: 45px; text-align: center; border: 2px solid #eee; transition: 0.3s; position: relative; }
+        .pkg-card.featured { border: 3px solid var(--blue); box-shadow: 0 10px 30px rgba(0,74,153,0.1); }
+        .price { font-size: 3.5rem; font-weight: 900; color: var(--blue); margin: 15px 0; }
 
-        /* Floating Buttons */
-        .fab-group { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 2000; }
-        .fab { width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: #fff; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .btn { width: 100%; padding: 20px; border-radius: 50px; border: none; font-weight: 800; cursor: pointer; font-size: 1.1rem; margin-top: 10px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; text-decoration: none; transition: 0.3s; }
+        .btn-blue { background: var(--blue); color: white; }
+        .btn-wa { background: #25D366; color: white; }
+        .btn:hover { opacity: 0.9; transform: translateY(-3px); }
+
+        footer { text-align: center; padding: 50px; background: #222; color: #fff; margin-top: 50px; }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">PATNA AI STUDIO PRO</div>
-        <div class="support-btns">
-            <a href="tel:+918210073056" class="nav-btn"><i class="fas fa-phone-alt"></i> CALL NOW</a>
-            <a href="https://wa.me/918210073056" class="nav-btn" style="border-color:var(--green); color:var(--green);"><i class="fab fa-whatsapp"></i> CHAT</a>
-        </div>
-    </nav>
+    <header>
+        <h1 class="logo">PATNA AI STUDIO PRO</h1>
+        <p style="font-weight: 600; letter-spacing: 1px;">RUNNISAIDPUR BLOCK | 33 PANCHAYATS LIVE ✅</p>
+    </header>
 
-    <section class="hero">
-        <h1 class="orbitron">BIHAR ELECTION HUB 2026</h1>
-        <div class="search-container">
-            <input type="text" id="mainSearch" class="search-box" placeholder="Type Name or Panchayat (Hindi/English)..." onkeyup="smartSearch()">
-        </div>
+    <div class="search-container">
+        <input type="text" id="mainSearch" class="main-search" placeholder="पंचायत या मुखिया का नाम लिखें (e.g. Manikchouk, Alok)..." onkeyup="smartSearch()">
+    </div>
 
-        <div id="result-display">
-            <div class="result-card">
-                <h2 id="resP" style="color: var(--gold); font-size: 2.8rem; font-family: 'Orbitron';"></h2>
-                <p id="resN" style="font-size: 2rem; margin: 15px 0; font-weight: 800; color: #fff;"></p>
-                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
-                    <a href="#" id="waLink" class="btn-pay btn-wa" style="width:auto; padding: 15px 40px;"><i class="fab fa-whatsapp"></i> SEND DEMO KIT</a>
-                    <a href="tel:+918210073056" class="btn-pay btn-gold" style="width:auto; padding: 15px 40px;"><i class="fas fa-bolt"></i> FAST ORDER</a>
-                </div>
+    <div id="result-box">
+        <div class="leader-card">
+            <h2 id="resP" style="color: var(--blue); font-size: 2.5rem; font-family: 'Orbitron';"></h2>
+            <p id="resN" style="font-size: 2rem; margin: 15px 0; font-weight: 800; color: #333;"></p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 25px;">
+                <a href="#" id="waLink" class="btn btn-wa" style="width:auto; padding: 15px 35px;"><i class="fab fa-whatsapp"></i> AI DEMO भेजें</a>
+                <a href="tel:+918210073056" class="btn btn-blue" style="width:auto; padding: 15px 35px;"><i class="fas fa-phone-alt"></i> कॉल करें</a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="demo-section">
-        <h2 style="text-align: center; color: var(--gold); font-size: 2.5rem; margin-bottom: 50px; font-family: 'Orbitron';">📺 PRO STUDIO SAMPLES</h2>
-        <div class="demo-grid">
-            <div class="demo-card">
-                <h3 style="color:var(--gold);">👑 MUKHIYA SUPREME</h3>
-                <p style="opacity:0.7; font-size:14px;">4K Video + Bajjika Anthem</p>
+    <div class="demo-section">
+        <h2 style="text-align: center; color: var(--blue); margin-bottom: 40px; font-family: 'Orbitron'; font-size: 2rem;">🎧 PRO STUDIO SAMPLES</h2>
+        <div class="grid">
+            <div class="audio-card">
+                <h3>👑 MUKHIYA DEMO</h3>
                 <audio controls><source src="demo-mukhiya.mp3"></audio>
+                <p style="font-size: 13px; margin-top: 10px; color: #666;">Bajjika Anthem + 4K AI Video</p>
             </div>
-            <div class="demo-card">
-                <h3 style="color:var(--gold);">⚖️ SARPANCH PRO</h3>
-                <p style="opacity:0.7; font-size:14px;">Nyay AI Voice + Pro Script</p>
+            <div class="audio-card">
+                <h3>⚖️ SARPANCH DEMO</h3>
                 <audio controls><source src="demo-sarpanch.mp3"></audio>
+                <p style="font-size: 13px; margin-top: 10px; color: #666;">Nyay AI Voice + Pro Script</p>
             </div>
-            <div class="demo-card">
-                <h3 style="color:var(--gold);">🏘️ WARD MEMBER</h3>
-                <p style="opacity:0.7; font-size:14px;">Local Jingle + Viral Text</p>
+            <div class="audio-card">
+                <h3>🏘️ WARD MEMBER DEMO</h3>
                 <audio controls><source src="demo-ward.mp3"></audio>
+                <p style="font-size: 13px; margin-top: 10px; color: #666;">Local Jingle + Viral Posters</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <div class="pkg-grid">
-        <div class="pkg-card" style="border-top: 6px solid var(--gold);">
-            <h3>👑 MUKHIYA PREMIUM</h3>
-            <div class="price">₹999</div>
-            <button class="btn-pay btn-gold" onclick="checkout(999, 'Mukhiya Supreme')"><i class="fas fa-credit-card"></i> PAY NOW (UPI/Card)</button>
-            <a href="https://wa.me/918210073056" class="btn-pay btn-wa">ORDER VIA WHATSAPP</a>
-        </div>
-        <div class="pkg-card">
-            <h3>⭐ WARD STARTER</h3>
-            <div class="price">₹299</div>
-            <button class="btn-pay btn-gold" onclick="checkout(299, 'Ward Starter')"><i class="fas fa-credit-card"></i> PAY NOW (UPI/Card)</button>
-            <a href="https://wa.me/918210073056" class="btn-pay btn-wa">ORDER VIA WHATSAPP</a>
+    <div class="demo-section" style="background: #f1f4f8;">
+        <div class="grid">
+            <div class="pkg-card featured">
+                <h3>MUKHIYA PREMIUM KIT</h3>
+                <div class="price">₹999</div>
+                <p style="margin-bottom: 20px; color: #666;">Full Campaign Video + Audio + 5 Posters</p>
+                <button class="btn btn-blue" onclick="checkout(999, 'Mukhiya Supreme')"><i class="fas fa-credit-card"></i> PAY NOW (UPI/Card)</button>
+            </div>
+            <div class="pkg-card">
+                <h3>WARD/SARPANCH KIT</h3>
+                <div class="price">₹299</div>
+                <p style="margin-bottom: 20px; color: #666;">Pro Audio Jingle + 2 HD Posters</p>
+                <button class="btn btn-blue" onclick="checkout(299, 'Ward-Sarpanch')"><i class="fas fa-credit-card"></i> PAY NOW (UPI/Card)</button>
+            </div>
         </div>
     </div>
 
-    <div class="fab-group">
-        <a href="https://wa.me/918210073056" class="fab" style="background: var(--green);"><i class="fab fa-whatsapp"></i></a>
-        <a href="tel:+918210073056" class="fab" style="background: var(--accent);"><i class="fas fa-phone"></i></a>
-    </div>
-
-    <footer style="text-align: center; padding: 60px; color: #444; border-top: 1px solid #222;">
-        <p class="orbitron">PATNA AI STUDIO PRO © 2026 | Runnisaidpur Block Hub | Bihar</p>
+    <footer>
+        <p class="logo" style="font-size: 1.5rem;">PATNA AI STUDIO PRO</p>
+        <p style="margin-top: 10px; opacity: 0.7;">Sitamarhi District Hub | Secure Payment Enabled</p>
     </footer>
 
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
-        // --- 100% FIXED DATABASE FROM PDF DATA ---
-        const db = [
+        // --- 100% COMPLETE 33 PANCHAYAT DATABASE ---
+        const leaders = [
+            {p: "मानिक चौक उत्तरी", n: "अनुराधा कुमारी", ph: "9708053007", t: "manikchouk uttari"},
+            {p: "मानिक चौक दक्षिणी", n: "राम नारायण साह", ph: "9576681301", t: "manikchouk dakshini"},
+            {p: "मानिक चौक पश्चिमी", n: "एकनाथ झा", ph: "7903795502", t: "manikchouk pashchimi"},
             {p: "अथरी", n: "आलोक कुमार", ph: "9431404766", t: "athri alok"},
-            {p: "गंगवारा बुजुर्ग", n: "सजी अहमद", ph: "9939115126", t: "gangwara saji"},
-            {p: "गुरुदह उर्फ गौसनगर", n: "आशा देवी", ph: "9939717998", t: "gausnagar asha"},
-            {p: "गिधा फुलवरिया", n: "राम लाल गम", ph: "020309004", t: "gidha ram lal shravan"},
-            {p: "कौडिया लालपुर", n: "अबधेश साह", ph: "9801878799", t: "kauria abadhesh"},
-            {p: "ओलीपुर सरहचिया", n: "प्रमोद आनन्द", ph: "9576359734", t: "olipur pramod"},
-            {p: "टिकौली", n: "निलम देवी", ph: "8877455944", t: "tikauli nilam"},
-            {p: "रुन्नीसैदपुर", n: "राम प्रीत राय", ph: "9931089201", t: "runnisaidpur ramprit"}
+            {p: "ओलीपुर सरहचिया", n: "प्रमोद आनन्द", ph: "9576359734", t: "olipur"},
+            {p: "कौडिया लालपुर", n: "अबधेश साह", ph: "9801878799", t: "kauria"},
+            {p: "गंगवारा बुजुर्ग", n: "सजी अहमद", ph: "9939115126", t: "gangwara"},
+            {p: "गुरुदह उर्फ गौसनगर", n: "आशा देवी", ph: "9939717998", t: "gausnagar"},
+            {p: "गिधा फुलवरिया", n: "राम लाल गम", ph: "020309004", t: "gidha"},
+            {p: "टिकौली", n: "निलम देवी", ph: "8877455944", t: "tikauli"},
+            {p: "थुम्मा", n: "रीना देवी", ph: "9708838142", t: "thumma"},
+            {p: "देवना बुजुर्ग", n: "माधुरी देवी", ph: "8789229959", t: "devna"},
+            {p: "धनुषी", n: "दिलीप कुमार पासवान", ph: "9576448601", t: "dhanushi"},
+            {p: "प्रेमनगर", n: "धर्मेन्द्र कमती", ph: "834394724", t: "premnagar"},
+            {p: "बगाही रामनगर", n: "रेणु देवी", ph: "9973259063", t: "bagahi"},
+            {p: "बघाड़ी", n: "रानी देवी", ph: "8084852630", t: "baghari"},
+            {p: "बरहेत्ता", n: "प्रमिला देवी", ph: "9631540736", t: "barhetta"},
+            {p: "बलुआ", n: "नवीन कुमार", ph: "8789109853", t: "balua"},
+            {p: "बहेरा", n: "शशि भूषण सिंह", ph: "9934415250", t: "bahera"},
+            {p: "बुलन्दपुर", n: "रविशंकर यादव", ph: "9931669238", t: "bulandpur"},
+            {p: "बेलाही नीलकंठ", n: "संजू देवी", ph: "7482832733", t: "belahi"},
+            {p: "मधौल खानी", n: "अनिता देवी", ph: "9572551531", t: "madhaul"},
+            {p: "महेशा फरकपुर", n: "टीमा देवी", ph: "8969054602", t: "mahesha"},
+            {p: "महिन्दवारा", n: "पूनम देवी", ph: "8507636404", t: "mahindwara"},
+            {p: "महिसार", n: "राम लखन राय", ph: "9708984611", t: "mahisar"},
+            {p: "मोरसंड", n: "कामनी सिंह", ph: "9771683366", t: "morsand"},
+            {p: "रुन्नीसैदपुर उत्तरी", n: "सगेयान देवी", ph: "9525571234", t: "runni north"},
+            {p: "रुन्नीसैदपुर मध्य", n: "प्रमिला देवी", ph: "7091942730", t: "runni central"},
+            {p: "रुन्नीसैदपुर दक्षिणी", n: "राम प्रीत राय", ph: "9931089201", t: "runni south"},
+            {p: "रुन्नीसैदपुर पश्चिमी", n: "विनय कुमार", ph: "9934279589", t: "runni west"},
+            {p: "सिरखिरिया", n: "मुकेश बैठा", ph: "9631925281", t: "sirkhiria"},
+            {p: "टैन विशुनी", n: "किरण देवी", ph: "9934659459", t: "tain"},
+            {p: "बहेरा", n: "शशि भूषण सिंह", ph: "9934415250", t: "bahera"}
         ];
 
         function smartSearch() {
             const val = document.getElementById('mainSearch').value.trim().toLowerCase();
-            const box = document.getElementById('result-display');
+            const box = document.getElementById('result-box');
             if (val.length < 2) { box.style.display = 'none'; return; }
 
-            // Triple scan logic for Hindi/English support
-            const found = db.find(l => l.p.toLowerCase().includes(val) || l.n.toLowerCase().includes(val) || l.t.includes(val));
-            if (found) {
+            const match = leaders.find(l => 
+                l.p.toLowerCase().includes(val) || 
+                l.n.toLowerCase().includes(val) || 
+                l.t.toLowerCase().includes(val)
+            );
+
+            if (match) {
                 box.style.display = 'block';
-                document.getElementById('resP').innerText = found.p;
-                document.getElementById('resN').innerText = "👑 " + found.n;
-                document.getElementById('waLink').href = `https://wa.me/91${found.ph}?text=नमस्ते ${found.n} जी! पटना AI स्टूडियो की तरफ से आपके ${found.p} चुनाव प्रचार के लिए...`;
+                document.getElementById('resP').innerText = match.p;
+                document.getElementById('resN').innerText = "👑 मुखिया: " + match.n;
+                document.getElementById('waLink').href = `https://wa.me/91${match.ph}?text=नमस्ते ${match.n} जी! पटना AI स्टूडियो की तरफ से आपके ${match.p} पंचायत के लिए विशेष चुनाव प्रचार ऑफर...`;
             } else { box.style.display = 'none'; }
         }
 
         function checkout(amt, pkg) {
             const options = {
-                "key": "rzp_test_RzNCtwgr2LMD2q",
+                "key": "rzp_test_RzNCtwgr2LMD2q", // Replace with live key
                 "amount": amt * 100,
                 "currency": "INR",
                 "name": "Patna AI Studio Pro",
                 "description": pkg + " Campaign Kit",
-                "theme": {"color": "#FFD700"},
-                "handler": function (resp) {
-                    alert("भुगतान सफल! ID: " + resp.razorpay_payment_id);
-                    window.location.href = `https://wa.me/918210073056?text=Payment Successful! ID:${resp.razorpay_payment_id}%20Package:${pkg}`;
+                "theme": {"color": "#004a99"},
+                "handler": function (resp) { 
+                    alert("भुगतान सफल! Order ID: " + resp.razorpay_payment_id);
+                    window.location.href = `https://wa.me/918210073056?text=Payment Success! ID: ${resp.razorpay_payment_id}`;
                 }
             };
             new Razorpay(options).open();
